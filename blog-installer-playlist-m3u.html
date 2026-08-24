@@ -1,0 +1,1312 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0A0A0C">
+<title>Installer une playlist M3U : le guide en français, appareil par appareil | France IPTV</title>
+<meta name="description" content="Comment charger une playlist M3U dans un IPTV player en français sur Smart TV, Fire TV Stick, Android TV, mobile et ordinateur, et régler les pistes audio VF.">
+<link rel="canonical" href="https://france-iptv.website/blog-installer-playlist-m3u.html">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="format-detection" content="telephone=no">
+<link rel="alternate" hreflang="fr" href="https://france-iptv.website/blog-installer-playlist-m3u.html">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="France IPTV">
+<meta property="og:url" content="https://france-iptv.website/blog-installer-playlist-m3u.html">
+<meta property="og:title" content="Installer une playlist M3U : le guide en français, appareil par appareil">
+<meta property="og:description" content="Comment charger une playlist M3U dans un IPTV player en français sur Smart TV, Fire TV Stick, Android TV, mobile et ordinateur, et régler les pistes audio VF.">
+<meta property="og:image" content="https://france-iptv.website/assets/og-image.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/logo-512.webp" type="image/webp">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Sora:wght@500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Installer une playlist M3U : le guide en français, appareil par appareil","description":"Comment charger une playlist M3U dans un IPTV player en français sur Smart TV, Fire TV Stick, Android TV, mobile et ordinateur, et régler les pistes audio VF.",
+"inLanguage":"fr-FR","mainEntityOfPage":"https://france-iptv.website/blog-installer-playlist-m3u.html",
+"image":"https://france-iptv.website/assets/og-image.webp",
+"publisher":{"@type":"Organization","name":"France IPTV","url":"https://france-iptv.website/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Accueil","item":"https://france-iptv.website/"},
+{"@type":"ListItem","position":2,"name":"Blog","item":"https://france-iptv.website/blog.html"},
+{"@type":"ListItem","position":3,"name":"Installer une playlist M3U : le guide en français, appareil par appareil"}]}
+</script>
+<style>
+/* ============================ TOKENS ============================ */
+:root{
+  --bg:#0A0A0C;      --bg-2:#0E0E11;   --bg-3:#131317;
+  --card:#121216;    --card-2:#17171C;
+  --ink:#F6F3ED;     --muted:#A7A096;  --dim:#736D64;
+  --gold:#E3B23C;    --gold-hi:#F6D179; --gold-deep:#A97C16;
+  --gold-soft:rgba(227,178,60,.09);
+  --line:rgba(227,178,60,.17);
+  --line-2:rgba(255,255,255,.075);
+  --wa:#25D366;      --wa-ink:#3DDC7F;
+  --r-s:10px; --r-m:14px; --r-l:20px; --r-xl:28px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --shadow-s:0 2px 10px rgba(0,0,0,.4);
+  --shadow-m:0 12px 34px rgba(0,0,0,.5);
+  --shadow-l:0 26px 66px rgba(0,0,0,.62);
+  --glow:0 0 0 1px rgba(227,178,60,.28), 0 16px 44px rgba(227,178,60,.14);
+}
+
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;
+  overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+/* fine grain so the black never looks flat */
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:1;opacity:.5;
+  background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:3px 3px;mix-blend-mode:overlay;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:Sora,Inter,sans-serif;line-height:1.14;letter-spacing:-.03em;font-weight:700}
+::selection{background:rgba(227,178,60,.28);color:#fff}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:6px}
+
+.wrap{width:min(1240px,100% - 44px);margin-inline:auto;position:relative;z-index:2}
+.section{padding:104px 0;position:relative}
+.section--alt{background:var(--bg-2)}
+.section--alt::before,.section--alt::after{
+  content:"";position:absolute;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--line),transparent);
+}
+.section--alt::before{top:0}.section--alt::after{bottom:0}
+
+/* ============================ TYPE ============================ */
+.eyebrow{
+  display:inline-flex;align-items:center;gap:9px;font-size:11.5px;font-weight:700;
+  letter-spacing:.19em;text-transform:uppercase;color:var(--gold);
+  padding:8px 17px;border-radius:999px;border:1px solid var(--line);background:var(--gold-soft);
+}
+.eyebrow::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--gold);box-shadow:0 0 10px var(--gold)}
+.h2{font-size:clamp(29px,3.9vw,45px);margin:19px 0 15px}
+.h2 em{font-style:normal;color:var(--gold)}
+.lead{color:var(--muted);font-size:17px;max-width:64ch;line-height:1.75}
+.sec-head{margin-bottom:56px}
+.sec-head.center{text-align:center;display:flex;flex-direction:column;align-items:center}
+.sec-head.center .lead{text-align:center}
+.rule{width:64px;height:2px;margin:22px auto 0;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+
+/* ============================ BUTTONS ============================ */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:14px 27px;border-radius:var(--r-m);font-weight:700;font-size:15px;
+  border:1px solid transparent;cursor:pointer;transition:.26s var(--ease);white-space:nowrap;
+  letter-spacing:-.01em;
+}
+.btn svg{width:18px;height:18px;flex-shrink:0}
+.btn-gold{
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold) 46%,var(--gold-deep));
+  color:#1A1204;box-shadow:0 12px 30px rgba(227,178,60,.26);font-weight:800;
+}
+.btn-gold:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(227,178,60,.38)}
+.btn-ghost{background:rgba(255,255,255,.035);border-color:var(--line);color:var(--ink)}
+.btn-ghost:hover{background:var(--gold-soft);border-color:rgba(227,178,60,.4);transform:translateY(-2px)}
+.btn-wa{background:var(--wa);color:#04351B;font-weight:800;box-shadow:0 12px 30px rgba(37,211,102,.22)}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 18px 40px rgba(37,211,102,.34)}
+.btn-lg{padding:17px 33px;font-size:16px}
+.btn-block{width:100%}
+
+/* ============================ HEADER ============================ */
+.hdr{
+  position:sticky;top:0;z-index:60;transition:.32s var(--ease);
+  background:transparent;border-bottom:1px solid transparent;
+}
+.hdr.is-stuck{
+  background:rgba(10,10,12,.82);backdrop-filter:blur(18px) saturate(150%);
+  -webkit-backdrop-filter:blur(18px) saturate(150%);
+  border-bottom-color:var(--line-2);box-shadow:0 10px 34px rgba(0,0,0,.44);
+}
+.hdr__in{display:flex;align-items:center;gap:20px;height:76px}
+.logo{display:flex;align-items:center;gap:12px;font-family:Sora,sans-serif;font-weight:700;font-size:17px;letter-spacing:-.035em;flex-shrink:0}
+.logo__mark{
+  width:40px;height:40px;border-radius:12px;display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(150deg,#1B1A17,#0D0D0F);border:1px solid var(--line);
+  box-shadow:inset 0 1px 0 rgba(246,209,121,.18),0 8px 20px rgba(0,0,0,.5);
+  transition:.28s var(--ease);
+}
+.logo__mark svg{width:22px;height:22px;color:var(--gold)}
+.logo:hover .logo__mark{transform:translateY(-2px);box-shadow:var(--glow)}
+.logo b{font-weight:800;color:var(--ink)}
+.logo i{font-style:normal;font-weight:500;color:var(--gold);letter-spacing:.02em}
+
+.nav{display:flex;align-items:center;gap:3px;margin-left:14px}
+.nav a{
+  padding:9px 12px;border-radius:9px;font-size:14.3px;font-weight:500;color:var(--muted);
+  transition:.2s var(--ease);position:relative;white-space:nowrap;
+}
+.nav a:hover{color:var(--ink);background:rgba(255,255,255,.045)}
+.nav a.is-active{color:var(--gold)}
+.nav a.is-active::after{
+  content:"";position:absolute;left:13px;right:13px;bottom:2px;height:2px;border-radius:2px;
+  background:linear-gradient(90deg,var(--gold-hi),var(--gold-deep));
+}
+.hdr__right{display:flex;align-items:center;gap:11px;margin-left:auto;flex-shrink:0}
+.hdr__wa{
+  display:inline-flex;align-items:center;gap:9px;font-size:14px;font-weight:600;white-space:nowrap;
+  padding:9px 14px;border-radius:11px;color:var(--ink);
+  background:rgba(37,211,102,.11);border:1px solid rgba(37,211,102,.3);transition:.22s var(--ease);
+}
+.hdr__wa:hover{background:rgba(37,211,102,.2)}
+.hdr__wa svg{width:16px;height:16px;color:var(--wa-ink)}
+.burger{
+  display:none;width:44px;height:42px;border-radius:11px;background:rgba(255,255,255,.05);
+  border:1px solid var(--line-2);cursor:pointer;padding:0;place-items:center;
+}
+.burger span{display:block;width:18px;height:2px;background:var(--ink);border-radius:2px;position:relative;transition:.25s var(--ease)}
+.burger span::before,.burger span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--ink);border-radius:2px;transition:.25s var(--ease)}
+.burger span::before{top:-6px}.burger span::after{top:6px}
+.burger.is-open span{background:transparent}
+.burger.is-open span::before{top:0;transform:rotate(45deg)}
+.burger.is-open span::after{top:0;transform:rotate(-45deg)}
+
+.mnav{
+  position:fixed;inset:76px 0 auto;z-index:59;background:rgba(10,10,12,.98);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--line-2);padding:20px 22px 30px;display:none;
+  max-height:calc(100vh - 76px);overflow-y:auto;
+}
+.mnav.is-open{display:block}
+.mnav a.mnav__l{
+  display:block;padding:14px 4px;font-size:16.5px;font-weight:600;color:var(--ink);
+  border-bottom:1px solid var(--line-2);
+}
+.mnav a.mnav__l:last-of-type{border-bottom:0}
+.mnav .btn{margin-top:18px}
+
+/* ============================ HERO ============================ */
+.hero{position:relative;padding:74px 0 92px;overflow:hidden;margin-top:-76px;padding-top:136px}
+.hero__bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.hero__bg::before{
+  content:"";position:absolute;top:-260px;left:50%;transform:translateX(-50%);
+  width:min(1180px,140vw);height:900px;
+  background:radial-gradient(circle at 50% 42%,rgba(227,178,60,.22),rgba(169,124,22,.07) 42%,transparent 68%);
+  filter:blur(8px);
+}
+.hero__bg::after{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(var(--line-2) 1px,transparent 1px),linear-gradient(90deg,var(--line-2) 1px,transparent 1px);
+  background-size:76px 76px;
+  -webkit-mask-image:radial-gradient(ellipse 80% 62% at 50% 34%,#000,transparent 74%);
+  mask-image:radial-gradient(ellipse 80% 62% at 50% 34%,#000,transparent 74%);
+  opacity:.65;
+}
+.hero__in{position:relative;z-index:2;text-align:center;display:flex;flex-direction:column;align-items:center}
+.hero h1{
+  font-size:clamp(35px,5.4vw,64px);margin:26px 0 22px;letter-spacing:-.045em;font-weight:800;
+  max-width:19ch;
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(102deg,var(--gold-hi),var(--gold) 42%,var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero__sub{color:#CFC9C0;font-size:clamp(16.5px,1.65vw,19.5px);max-width:60ch;line-height:1.7}
+.hero__sub b{color:var(--ink);font-weight:700}
+.hero__sub2{color:var(--dim);font-size:15px;max-width:66ch;margin-top:16px;line-height:1.72}
+.hero__cta{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:36px}
+.hero__wa{display:inline-flex;align-items:center;gap:10px;padding:9px 6px;font-weight:600;color:#CFC9C0;transition:.22s var(--ease)}
+.hero__wa:hover{color:var(--ink)}
+.hero__wa svg{width:19px;height:19px;color:var(--wa-ink)}
+.hero__wa small{display:block;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim);font-weight:700}
+.hero__wa b{display:block;font-size:15.5px;font-weight:700;letter-spacing:-.02em;color:var(--ink)}
+
+.badges{list-style:none;display:flex;gap:11px;flex-wrap:wrap;justify-content:center;margin-top:38px}
+.badges li{
+  display:inline-flex;align-items:center;gap:8px;font-size:13.5px;font-weight:600;color:#C4BDB3;
+  padding:9px 15px;border-radius:999px;background:rgba(255,255,255,.035);border:1px solid var(--line-2);
+}
+.badges svg{width:14px;height:14px;color:var(--gold)}
+
+.hero__stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:52px;width:100%;max-width:1000px;
+}
+.hero__stat{
+  padding:24px 18px;border-radius:var(--r-l);text-align:center;
+  background:linear-gradient(170deg,rgba(255,255,255,.055),rgba(255,255,255,.015));
+  border:1px solid var(--line-2);backdrop-filter:blur(6px);
+}
+.hero__stat b{
+  display:block;font-family:Sora,sans-serif;font-size:clamp(23px,2.5vw,31px);font-weight:800;letter-spacing:-.04em;
+  background:linear-gradient(102deg,var(--gold-hi),var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.hero__stat span{display:block;margin-top:6px;font-size:12.5px;color:var(--dim);font-weight:600;letter-spacing:.03em}
+
+/* ============================ FEATURE CARDS ============================ */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.pcard{
+  position:relative;padding:34px 30px 32px;border-radius:var(--r-xl);overflow:hidden;
+  background:linear-gradient(168deg,var(--card-2),var(--card));
+  border:1px solid var(--line-2);transition:.34s var(--ease);
+}
+.pcard::before{
+  content:"";position:absolute;inset:0;opacity:0;transition:opacity .35s var(--ease);
+  background:radial-gradient(circle at 50% 0%,rgba(227,178,60,.13),transparent 62%);
+}
+.pcard:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:var(--shadow-l)}
+.pcard:hover::before{opacity:1}
+.pcard__n{position:absolute;top:24px;right:26px;font-family:Sora,sans-serif;font-size:13px;font-weight:800;color:rgba(246,243,237,.13);letter-spacing:.1em}
+.pcard__ic{
+  width:52px;height:52px;border-radius:15px;display:grid;place-items:center;margin-bottom:20px;
+  background:var(--gold-soft);border:1px solid var(--line);position:relative;z-index:1;
+}
+.pcard__ic svg{width:24px;height:24px;color:var(--gold)}
+.pcard h3{font-size:20px;margin-bottom:11px;position:relative;z-index:1}
+.pcard p{color:var(--muted);font-size:14.8px;line-height:1.72;position:relative;z-index:1}
+
+/* ============================ WHY US ============================ */
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why__i{
+  padding:30px 28px;border-radius:var(--r-l);background:var(--card);
+  border:1px solid var(--line-2);transition:.3s var(--ease);
+}
+.why__i:hover{border-color:var(--line);background:var(--card-2);transform:translateY(-4px)}
+.why__i h3{font-size:17.5px;margin-bottom:10px;display:flex;align-items:center;gap:11px}
+.why__i h3 svg{width:20px;height:20px;color:var(--gold);flex-shrink:0}
+.why__i p{color:var(--muted);font-size:14.4px;line-height:1.72}
+.facts{
+  margin-top:26px;padding:26px 30px;border-radius:var(--r-l);
+  background:linear-gradient(100deg,rgba(227,178,60,.09),rgba(227,178,60,.02));
+  border:1px solid var(--line);display:grid;grid-template-columns:repeat(3,1fr);gap:24px;
+}
+.facts div{display:flex;gap:13px;align-items:flex-start}
+.facts svg{width:19px;height:19px;color:var(--gold);flex-shrink:0;margin-top:3px}
+.facts p{font-size:14px;color:#C4BDB3;line-height:1.66}
+.facts b{color:var(--ink);font-weight:700}
+
+/* ============================ DEVICES ============================ */
+.devices{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
+.dev{
+  display:flex;flex-direction:column;align-items:center;text-align:center;gap:13px;
+  padding:24px 14px 20px;border-radius:var(--r-l);background:var(--card);
+  border:1px solid var(--line-2);transition:.3s var(--ease);position:relative;overflow:hidden;
+}
+.dev::before{
+  content:"";position:absolute;inset:0;opacity:0;transition:opacity .3s var(--ease);
+  background:radial-gradient(circle at 50% 0%,rgba(227,178,60,.12),transparent 66%);
+}
+.dev:hover{transform:translateY(-5px);border-color:var(--line);background:var(--card-2);box-shadow:var(--shadow-m)}
+.dev:hover::before{opacity:1}
+.dev__logo{
+  width:54px;height:54px;border-radius:15px;display:grid;place-items:center;flex-shrink:0;
+  background:linear-gradient(160deg,rgba(255,255,255,.06),rgba(255,255,255,.015));
+  border:1px solid var(--line-2);position:relative;z-index:1;transition:.3s var(--ease);
+}
+.dev__logo svg{width:26px;height:26px;color:#CFC7B8;transition:.3s var(--ease)}
+.dev:hover .dev__logo{border-color:var(--line);background:var(--gold-soft)}
+.dev:hover .dev__logo svg{color:var(--gold-hi)}
+.dev__t{position:relative;z-index:1}
+.dev__t b{display:block;font-size:14px;font-weight:700;letter-spacing:-.015em}
+.dev__t small{display:block;font-size:11.6px;color:var(--dim);margin-top:3px;line-height:1.45}
+.devices__note{
+  margin-top:32px;text-align:center;font-size:14.6px;color:var(--muted);
+  max-width:64ch;margin-inline:auto;line-height:1.7;
+}
+.devices__note small{display:block;margin-top:10px;font-size:12.2px;color:var(--dim)}
+
+/* ============================ PRICING ============================ */
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;align-items:stretch}
+.plan{
+  position:relative;padding:34px 25px 28px;border-radius:var(--r-xl);
+  background:linear-gradient(168deg,var(--card-2),var(--card));
+  border:1px solid var(--line-2);transition:.34s var(--ease);display:flex;flex-direction:column;
+}
+.plan > *{position:relative;z-index:1}
+.plan:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:var(--shadow-l)}
+.plan--best{
+  border-color:rgba(227,178,60,.44);
+  box-shadow:0 0 0 1px rgba(227,178,60,.16),0 22px 56px rgba(0,0,0,.62);
+}
+.plan--best::before{
+  content:"";position:absolute;inset:0;border-radius:var(--r-xl);pointer-events:none;z-index:0;
+  background:radial-gradient(circle at 50% 0%,rgba(227,178,60,.16),transparent 58%);
+}
+.plan__tag{
+  position:absolute;top:-12px;left:50%;transform:translateX(-50%);z-index:2;
+  font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;
+  padding:6px 15px;border-radius:999px;white-space:nowrap;
+  background:linear-gradient(135deg,var(--gold-hi),var(--gold-deep));color:#1A1204;
+  box-shadow:0 8px 20px rgba(227,178,60,.32);
+}
+.plan:not(.plan--best) .plan__tag{
+  background:rgba(255,255,255,.07);color:var(--gold);border:1px solid var(--line);box-shadow:none;
+}
+.plan h3{font-size:15px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;margin-bottom:7px}
+.plan__sub{display:block;font-size:12.8px;color:var(--dim);line-height:1.5}
+.plan__free{
+  display:inline-block;margin-top:12px;font-size:11.6px;font-weight:700;letter-spacing:.03em;
+  padding:6px 13px;border-radius:999px;color:var(--gold);
+  background:var(--gold-soft);border:1px solid var(--line);
+}
+.plan__price{margin:16px 0 5px;display:flex;align-items:baseline;gap:7px;flex-wrap:wrap}
+.plan__price b{
+  font-family:Sora,sans-serif;font-size:37px;font-weight:800;letter-spacing:-.05em;line-height:1;
+  background:linear-gradient(102deg,var(--gold-hi),var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+.plan__price span{font-size:13px;color:var(--dim);font-weight:600}
+.plan__note{display:block;font-size:12.4px;color:var(--dim);line-height:1.55;min-height:3.1em}
+.plan__free--ghost{visibility:hidden;pointer-events:none}
+.plan__sub{min-height:2.2em}
+.plan__q{
+  display:flex;align-items:center;justify-content:space-between;gap:8px;margin:20px 0 10px;
+  padding:8px 9px;border-radius:var(--r-m);background:rgba(255,255,255,.045);
+  border:1px solid var(--line-2);
+}
+.plan__q button{
+  width:32px;height:32px;border-radius:9px;background:rgba(255,255,255,.06);
+  border:1px solid var(--line-2);cursor:pointer;display:grid;place-items:center;
+  font-size:17px;font-weight:700;line-height:1;transition:.2s var(--ease);color:var(--ink);flex-shrink:0;
+}
+.plan__q button:hover:not(:disabled){background:var(--gold-soft);border-color:var(--line);color:var(--gold)}
+.plan__q button:disabled{opacity:.3;cursor:not-allowed}
+.plan__qn{font-size:14px;font-weight:600;color:var(--muted);text-align:center;flex:1}
+.plan__qn b{font-weight:800;color:var(--ink);font-family:Sora,sans-serif}
+.plan__disc{font-size:11.6px;color:var(--dim);line-height:1.55;text-align:center;margin-bottom:20px}
+.plan__disc b{color:var(--gold);font-weight:700}
+.plan ul{list-style:none;display:grid;gap:10px;margin-bottom:24px}
+.plan li{display:flex;gap:9px;align-items:flex-start;font-size:13.6px;color:var(--muted);line-height:1.55}
+.plan li svg{width:15px;height:15px;color:var(--gold);flex-shrink:0;margin-top:3px}
+.plan .btn{margin-top:auto}
+.plans__note{text-align:center;margin-top:34px;font-size:14px;color:var(--dim)}
+.plans__note a{color:var(--gold);font-weight:700}
+
+/* ============================ CHECKOUT ============================ */
+.co{position:fixed;inset:0;z-index:120;display:none}
+.co.is-open{display:block}
+.co__back{position:absolute;inset:0;background:rgba(4,4,6,.78);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.co__panel{
+  position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+  width:min(560px,calc(100vw - 32px));max-height:calc(100vh - 40px);overflow-y:auto;
+  padding:38px 36px 28px;border-radius:var(--r-xl);
+  background:linear-gradient(168deg,#17171C,#0E0E12);
+  border:1px solid var(--line);box-shadow:0 40px 100px rgba(0,0,0,.75);
+  animation:coIn .3s var(--ease);
+}
+@keyframes coIn{from{opacity:0;transform:translate(-50%,-46%) scale(.97)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.co__panel::-webkit-scrollbar{width:10px}
+.co__panel::-webkit-scrollbar-track{background:transparent}
+.co__panel::-webkit-scrollbar-thumb{background:rgba(227,178,60,.34);border-radius:8px;border:3px solid transparent;background-clip:content-box}
+.co__x{
+  position:absolute;top:16px;right:16px;width:38px;height:38px;border-radius:11px;
+  background:rgba(255,255,255,.06);border:1px solid var(--line-2);cursor:pointer;
+  display:grid;place-items:center;color:var(--muted);transition:.22s var(--ease);
+}
+.co__x:hover{background:var(--gold-soft);border-color:var(--line);color:var(--gold)}
+.co__x svg{width:17px;height:17px}
+.co__panel h2{font-size:clamp(23px,3vw,29px);margin-bottom:9px;padding-right:44px}
+.co__intro{color:var(--muted);font-size:14.6px;line-height:1.65;margin-bottom:24px}
+.co__intro b{color:var(--ink)}
+
+.co__sum{
+  padding:19px 21px;border-radius:var(--r-l);margin-bottom:26px;
+  background:linear-gradient(150deg,rgba(227,178,60,.08),rgba(227,178,60,.02));
+  border:1px solid var(--line);
+}
+.co__row{display:flex;justify-content:space-between;align-items:baseline;gap:18px;font-size:14px;padding:7px 0}
+.co__row span{color:var(--muted);flex-shrink:0}
+.co__row b{font-weight:700;text-align:right}
+.co__row--tot{margin-top:8px;padding-top:15px;border-top:1px solid var(--line-2)}
+.co__row--tot span{font-size:15px;color:var(--ink);font-weight:600}
+.co__row--tot b{
+  font-family:Sora,sans-serif;font-size:24px;font-weight:800;letter-spacing:-.04em;
+  background:linear-gradient(102deg,var(--gold-hi),var(--gold-deep));
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+}
+
+.co__f{margin-bottom:19px}
+.co__f > label{
+  display:block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--dim);margin-bottom:9px;
+}
+.co__f input[type=text],.co__f input[type=email],.co__f input[type=tel],.co__tel select{
+  width:100%;padding:14px 16px;border-radius:var(--r-m);font-size:15px;font-family:inherit;
+  background:rgba(255,255,255,.045);border:1px solid var(--line-2);color:var(--ink);
+  transition:.22s var(--ease);
+}
+.co__f input::placeholder{color:#5C574F}
+.co__f input:focus,.co__tel select:focus{outline:0;border-color:rgba(227,178,60,.55);background:rgba(227,178,60,.06)}
+.co__f input[aria-invalid="true"]{border-color:#E5484D;background:rgba(229,72,77,.07)}
+.co__tel{display:flex;gap:10px}
+.co__tel select{
+  width:auto;min-width:112px;flex-shrink:0;cursor:pointer;font-weight:600;
+  appearance:none;-webkit-appearance:none;padding-right:34px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23A7A096' stroke-width='2.4' stroke-linecap='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:right 11px center;background-size:14px;
+}
+.co__tel select option{background:#17171C;color:var(--ink)}
+.co__err{display:none;margin-top:7px;font-size:12.4px;color:#FF6B70;font-weight:600}
+.co__err.is-on{display:block}
+
+.co__pay{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+@media (min-width:761px){.co__pay{grid-template-columns:1.35fr 1fr}}
+.co__opt{cursor:pointer}
+.co__opt input{position:absolute;opacity:0;width:0;height:0}
+.co__optb{
+  display:flex;align-items:center;gap:11px;padding:14px 15px;border-radius:var(--r-m);
+  background:rgba(255,255,255,.04);border:1px solid var(--line-2);transition:.22s var(--ease);height:100%;
+}
+.co__optb b{font-size:14px;font-weight:700}
+.co__opti{
+  width:32px;height:32px;border-radius:9px;display:grid;place-items:center;flex-shrink:0;
+  background:rgba(255,255,255,.05);border:1px solid var(--line-2);transition:.22s var(--ease);
+}
+.co__opti svg{width:17px;height:17px;color:var(--muted);transition:.22s var(--ease)}
+.co__opt:hover .co__optb{border-color:rgba(227,178,60,.34)}
+.co__opt input:checked + .co__optb{border-color:var(--gold);background:var(--gold-soft)}
+.co__opt input:checked + .co__optb .co__opti{background:rgba(227,178,60,.16);border-color:var(--line)}
+.co__opt input:checked + .co__optb .co__opti svg{color:var(--gold)}
+.co__opt input:focus-visible + .co__optb{outline:2px solid var(--gold);outline-offset:2px}
+
+/* logo PayPal officiel : pastille blanche, bleu de marque #002991 */
+.co__opti--pp,
+.co__opt input:checked + .co__optb .co__opti--pp{background:#fff;border-color:#fff}
+.co__opti--pp svg,
+.co__opt input:checked + .co__optb .co__opti--pp svg{color:#002991;width:18px;height:18px}
+/* réseaux acceptés, à droite de « Carte bancaire » */
+.co__nets{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
+.co__net{height:15px;color:#8E877D;transition:.22s var(--ease)}
+.co__net--visa{width:31px}
+.co__net--mc{width:19px}
+.co__opt input:checked + .co__optb .co__net{color:#D8D1C6}
+
+.co__hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+.co__note{display:flex;gap:10px;align-items:flex-start;margin-top:20px;font-size:12.4px;color:var(--dim);line-height:1.6}
+.co__note svg{width:15px;height:15px;color:var(--gold);flex-shrink:0;margin-top:2px}
+.co__q{margin-top:13px;text-align:center;font-size:13.4px;color:var(--muted)}
+.co__q a{color:var(--gold);font-weight:700}
+.co__cancel{
+  display:block;margin:18px auto 0;padding:9px 20px;background:none;border:0;cursor:pointer;
+  font-size:13.6px;font-weight:600;color:var(--dim);border-radius:9px;transition:.2s var(--ease);
+}
+.co__cancel:hover{color:var(--ink);background:rgba(255,255,255,.05)}
+.co__done{
+  width:62px;height:62px;border-radius:50%;display:grid;place-items:center;margin-bottom:20px;
+  background:var(--gold-soft);border:1px solid var(--line);
+}
+.co__done svg{width:31px;height:31px;color:var(--gold)}
+
+/* ============================ ARTICLE + SIDEBAR ============================ */
+.guide{display:grid;grid-template-columns:1fr 340px;gap:52px;align-items:start}
+.prose h2{font-size:clamp(25px,3vw,34px);margin:0 0 18px}
+.prose h3{font-size:20px;margin:36px 0 12px;color:var(--ink)}
+.prose p{color:var(--muted);font-size:15.6px;line-height:1.82;margin-bottom:16px}
+.prose b{color:var(--ink);font-weight:700}
+.prose a{color:var(--gold);font-weight:600;border-bottom:1px solid rgba(227,178,60,.35)}
+.prose ul,.prose ol{margin:0 0 18px 20px;color:var(--muted);font-size:15.4px;line-height:1.8}
+.prose li{margin-bottom:9px}
+.prose li::marker{color:var(--gold)}
+.side{
+  position:sticky;top:100px;padding:30px 27px;border-radius:var(--r-xl);
+  background:linear-gradient(168deg,var(--card-2),var(--card));border:1px solid var(--line);
+  box-shadow:var(--shadow-m);
+}
+.side h3{font-size:18px;margin-bottom:18px}
+.side dl{margin:0;display:grid;gap:14px}
+.side dl > div{display:flex;justify-content:space-between;gap:16px;padding-bottom:13px;border-bottom:1px solid var(--line-2);font-size:14px}
+.side dt{color:var(--dim)}
+.side dd{margin:0;font-weight:700;text-align:right}
+.side dd.gold{color:var(--gold)}
+.side .btn{margin-top:22px}
+.side__num{text-align:center;font-size:13px;color:var(--dim);margin-top:13px}
+.side__num a{color:var(--ink);font-weight:700}
+
+/* ============================ FAQ ============================ */
+.faq{max-width:900px;margin-inline:auto;display:grid;gap:12px}
+.acc{border-radius:var(--r-m);background:var(--card);border:1px solid var(--line-2);overflow:hidden;transition:.28s var(--ease)}
+.acc.is-open{border-color:var(--line);background:var(--card-2)}
+.acc__q{
+  width:100%;display:flex;align-items:center;justify-content:space-between;gap:18px;
+  padding:19px 24px;background:none;border:0;cursor:pointer;text-align:left;
+  font-family:Sora,sans-serif;font-size:16px;font-weight:600;letter-spacing:-.02em;transition:.22s var(--ease);
+}
+.acc__q:hover{color:var(--gold)}
+.acc__ic{position:relative;width:17px;height:17px;flex-shrink:0}
+.acc__ic::before,.acc__ic::after{
+  content:"";position:absolute;left:50%;top:50%;background:var(--gold);border-radius:2px;transition:.28s var(--ease);
+}
+.acc__ic::before{width:15px;height:2px;transform:translate(-50%,-50%)}
+.acc__ic::after{width:2px;height:15px;transform:translate(-50%,-50%)}
+.acc.is-open .acc__ic::after{transform:translate(-50%,-50%) rotate(90deg);opacity:0}
+.acc__a{max-height:0;overflow:hidden;transition:max-height .34s var(--ease)}
+.acc__a p{padding:0 24px 21px;color:var(--muted);font-size:15px;line-height:1.78}
+.acc__a b{color:var(--ink)}
+
+/* ============================ CONTACT ============================ */
+.contact__box{
+  max-width:640px;margin-inline:auto;text-align:center;padding:52px 40px;border-radius:var(--r-xl);
+  background:linear-gradient(168deg,var(--card-2),var(--card));border:1px solid var(--line);
+  box-shadow:var(--shadow-l);position:relative;overflow:hidden;
+}
+.contact__box::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(circle at 50% -10%,rgba(227,178,60,.16),transparent 60%);
+}
+.contact__box > *{position:relative;z-index:1}
+.contact__box h2{font-size:clamp(27px,3.4vw,40px);margin:17px 0 14px}
+.contact__box > p{color:var(--muted);font-size:16px;margin-bottom:28px;max-width:46ch;margin-inline:auto}
+.contact__wa{
+  display:inline-flex;align-items:center;gap:14px;padding:16px 24px;border-radius:15px;margin-bottom:22px;
+  background:rgba(255,255,255,.04);border:1px solid var(--line-2);transition:.28s var(--ease);
+}
+.contact__wa:hover{background:rgba(37,211,102,.1);border-color:rgba(37,211,102,.34);transform:translateY(-2px)}
+.contact__wa svg{width:22px;height:22px;color:var(--wa-ink)}
+.contact__wa small{display:block;color:var(--dim);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;text-align:left}
+.contact__wa b{display:block;font-family:Sora,sans-serif;font-size:19px;font-weight:800;letter-spacing:-.03em;text-align:left}
+.contact__hours{margin-top:16px;font-size:13.4px;color:var(--dim)}
+
+/* ============================ FOOTER ============================ */
+.ftr{background:var(--bg-2);border-top:1px solid var(--line-2);padding:66px 0 28px;position:relative}
+.ftr__grid{display:grid;grid-template-columns:1.7fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+.ftr__about p{color:var(--muted);font-size:14.2px;margin:16px 0 18px;line-height:1.72;max-width:38ch}
+.ftr__wa{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;transition:.22s var(--ease)}
+.ftr__wa:hover{color:var(--gold)}
+.ftr__wa svg{width:17px;height:17px;color:var(--wa-ink)}
+.ftr h4{font-family:Sora,sans-serif;font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:17px;font-weight:700}
+.ftr ul{list-style:none;display:grid;gap:11px}
+.ftr ul a{color:var(--muted);font-size:14.2px;transition:.2s var(--ease)}
+.ftr ul a:hover{color:var(--ink);padding-left:4px}
+.disclaimer{
+  font-size:12.6px;color:var(--dim);line-height:1.72;padding:22px 0;
+  border-top:1px solid var(--line-2);border-bottom:1px solid var(--line-2);
+}
+.ftr__bot{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-top:22px;font-size:13px;color:var(--dim)}
+
+/* ============================ WHATSAPP WIDGET ============================ */
+.wa{position:fixed;right:22px;bottom:22px;z-index:80}
+.wa__bubble{
+  width:60px;height:60px;border-radius:50%;border:0;cursor:pointer;display:grid;place-items:center;
+  background:var(--wa);box-shadow:0 14px 34px rgba(37,211,102,.42);transition:.28s var(--ease);position:relative;
+}
+.wa__bubble svg{width:30px;height:30px;color:#04351B}
+.wa__bubble:hover{transform:scale(1.07)}
+.wa__bubble::after{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid var(--wa);animation:waPing 2.6s cubic-bezier(0,0,.2,1) infinite}
+@keyframes waPing{0%{transform:scale(1);opacity:.7}70%,100%{transform:scale(1.65);opacity:0}}
+.wa__dot{
+  position:absolute;top:-2px;right:-2px;min-width:20px;height:20px;border-radius:999px;background:#E5484D;
+  color:#fff;font-size:11px;font-weight:800;display:grid;place-items:center;border:2px solid var(--bg);
+}
+.wa__panel{
+  position:absolute;right:0;bottom:74px;width:min(320px,calc(100vw - 44px));border-radius:var(--r-l);
+  background:var(--card-2);border:1px solid var(--line);box-shadow:var(--shadow-l);overflow:hidden;
+  opacity:0;visibility:hidden;transform:translateY(12px) scale(.97);transition:.28s var(--ease);
+}
+.wa__panel.is-open{opacity:1;visibility:visible;transform:none}
+.wa__head{background:#0E3B24;padding:15px 17px;display:flex;align-items:center;gap:12px;position:relative}
+.wa__av{width:38px;height:38px;border-radius:50%;background:var(--wa);display:grid;place-items:center;flex-shrink:0}
+.wa__av svg{width:21px;height:21px;color:#04351B}
+.wa__head b{display:block;font-size:14.4px;font-weight:700}
+.wa__head small{display:block;font-size:11.6px;color:#8FE3B0}
+.wa__x{position:absolute;right:12px;top:12px;width:26px;height:26px;border-radius:7px;background:rgba(255,255,255,.12);border:0;cursor:pointer;display:grid;place-items:center;color:#fff;font-size:15px;line-height:1}
+.wa__body{padding:20px 17px;background:#101014}
+.wa__msg{background:var(--card);border:1px solid var(--line-2);border-radius:4px 14px 14px 14px;padding:13px 15px;font-size:13.8px;color:#C4BDB3;line-height:1.65}
+.wa__msg b{color:var(--ink)}
+.wa__time{display:block;margin-top:7px;font-size:10.5px;color:var(--dim);text-align:right}
+.wa__foot{padding:0 17px 17px;background:#101014}
+.wa__foot p{margin-top:11px;font-size:11.4px;color:var(--dim);text-align:center;line-height:1.55}
+
+/* ============================ REVEAL ============================ */
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+
+/* ============================ RESPONSIVE ============================ */
+@media (max-width:1180px){
+  .nav{display:none}
+  .burger{display:grid}
+  .devices{grid-template-columns:repeat(4,1fr)}
+  .plans{grid-template-columns:repeat(2,1fr)}
+  .guide{grid-template-columns:1fr;gap:40px}
+  .side{position:static}
+}
+@media (max-width:1000px){
+  .devices{grid-template-columns:repeat(3,1fr)}
+  .co__panel{padding:34px 26px 24px}
+  .hdr__wa span{display:none}
+  .hdr__wa{padding:10px}
+  .grid-3,.why{grid-template-columns:repeat(2,1fr)}
+  .facts{grid-template-columns:1fr;gap:16px}
+  .ftr__grid{grid-template-columns:1fr 1fr;gap:32px}
+}
+@media (max-width:760px){
+  .section{padding:74px 0}
+  .wrap{width:min(1240px,100% - 34px)}
+  .hero{padding-top:126px;padding-bottom:70px}
+  .hero__stats{grid-template-columns:repeat(2,1fr)}
+  .grid-3,.why,.plans{grid-template-columns:1fr}
+  .devices{grid-template-columns:repeat(2,1fr)}
+  .co__panel{width:calc(100vw - 22px);max-height:calc(100vh - 22px);padding:30px 20px 22px}
+  .co__pay{grid-template-columns:1fr}
+  .co__tel select{min-width:104px}
+  .hero__cta{flex-direction:column;width:100%}
+  .hero__cta .btn{width:100%}
+  .contact__box{padding:40px 24px}
+  .ftr__grid{grid-template-columns:1fr;gap:30px}
+  .wa{right:16px;bottom:16px}
+  /* the mobile menu already carries the CTA — keep the bar from overflowing */
+  .hdr__right .btn-gold{display:none}
+  .hdr__in{gap:12px}
+}
+@media (max-width:420px){
+  .hdr__in{height:68px;gap:10px}
+  .mnav{inset:68px 0 auto}
+  .hero{margin-top:-68px;padding-top:118px}
+  .logo{font-size:15.5px;gap:9px}
+  .logo__mark{width:36px;height:36px;border-radius:11px}
+  .logo__mark svg{width:20px;height:20px}
+  .wrap{width:min(1240px,100% - 28px)}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  html{scroll-behavior:auto}
+  .rv{opacity:1;transform:none}
+}
+
+/* ---- blog ---- */
+.bhero{padding:132px 0 56px;position:relative;overflow:hidden}
+.bhero__bg{position:absolute;inset:0;pointer-events:none}
+.bhero__bg::before{content:"";position:absolute;top:-300px;left:50%;transform:translateX(-50%);width:min(1100px,140vw);height:760px;background:radial-gradient(circle at 50% 42%,rgba(227,178,60,.17),transparent 66%)}
+.bhero h1{font-size:clamp(31px,4.6vw,52px);margin:20px 0 16px;max-width:22ch}
+.bhero .lead{font-size:17.5px}
+.bmeta{display:flex;gap:16px;flex-wrap:wrap;color:var(--dim);font-size:13.4px;margin-top:20px}
+.bmeta span{display:inline-flex;align-items:center;gap:7px}
+.bmeta svg{width:15px;height:15px;color:var(--gold)}
+.bgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.bcard{display:block;padding:30px 28px;border-radius:var(--r-xl);background:linear-gradient(168deg,var(--card-2),var(--card));border:1px solid var(--line-2);transition:.32s var(--ease)}
+.bcard:hover{transform:translateY(-6px);border-color:var(--line);box-shadow:var(--shadow-l)}
+.bcard span.eyebrow{margin-bottom:16px}
+.bcard h2{font-family:Sora,sans-serif;font-size:20px;margin:16px 0 11px;letter-spacing:-.03em;line-height:1.3}
+.bcard p{color:var(--muted);font-size:14.6px;line-height:1.72}
+.bcard em{font-style:normal;display:inline-flex;align-items:center;gap:7px;margin-top:16px;color:var(--gold);font-weight:700;font-size:14px}
+.article{max-width:790px;margin-inline:auto}
+.article .prose h2{margin-top:44px}
+.toc{padding:24px 26px;border-radius:var(--r-l);background:var(--card);border:1px solid var(--line);margin:8px 0 36px}
+.toc b{display:block;font-family:Sora,sans-serif;font-size:13px;letter-spacing:.13em;text-transform:uppercase;color:var(--gold);margin-bottom:13px}
+.toc ol{margin:0 0 0 18px;color:var(--muted);font-size:14.6px;line-height:1.85}
+.toc a{color:var(--muted);border:0}
+.toc a:hover{color:var(--gold)}
+.cta-band{margin-top:52px;padding:44px 38px;border-radius:var(--r-xl);text-align:center;background:linear-gradient(168deg,var(--card-2),var(--card));border:1px solid var(--line);box-shadow:var(--shadow-m)}
+.cta-band h2{font-size:clamp(24px,3vw,33px);margin-bottom:13px}
+.cta-band p{color:var(--muted);font-size:15.6px;max-width:52ch;margin:0 auto 24px}
+.cta-band .btn{margin-inline:auto;max-width:340px}
+.cta-band small{display:block;margin-top:13px;font-size:12.6px;color:var(--dim)}
+@media (max-width:1000px){.bgrid{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.bgrid{grid-template-columns:1fr}.bhero{padding-top:112px}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-logomark" viewBox="0 0 24 24"><path d="M18.4 5.1A9.2 9.2 0 1 0 21.1 14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/><path d="M10.1 8.2 15.4 11.3a.8.8 0 0 1 0 1.4l-5.3 3.1A.8.8 0 0 1 8.9 15.1V8.9A.8.8 0 0 1 10.1 8.2Z" fill="currentColor"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0 0 20.464 3.488"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="m4 12.5 5.2 5L20 6.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M3.5 6h11M3.5 12h11M3.5 18h7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17.4 14.6 22 17.3l-4.6 2.7Z" fill="currentColor" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+  <symbol id="i-devices" viewBox="0 0 24 24"><rect x="1.6" y="4.4" width="14" height="10.4" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M5.6 18.6h6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="17" y="8.4" width="5.4" height="11.2" rx="1.7" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-bolt" viewBox="0 0 24 24"><path d="M13.2 2.5 4.8 13.4h5.6l-.6 8.1 8.4-10.9h-5.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 2.6 20 5.6v6c0 5-3.4 8.3-8 9.8-4.6-1.5-8-4.8-8-9.8v-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.7 11.8 2.3 2.3 4.3-4.4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.6c0 4.2-4 7.6-9 7.6a10.4 10.4 0 0 1-2.9-.4L4 21l1.4-3.6A7.2 7.2 0 0 1 3 11.6C3 7.4 7 4 12 4s9 3.4 9 7.6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.3 9.5h17.4M3.3 14.5h17.4M12 3a15 15 0 0 1 0 18 15 15 0 0 1 0-18Z" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7v5.3l3.4 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-6.4 10-6.4S22 12 22 12s-3.6 6.4-10 6.4S2 12 2 12Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><circle cx="12" cy="12" r="2.8" fill="none" stroke="currentColor" stroke-width="1.8"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 3.2 2.7 5.6 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1L3.2 9.7l6.1-.9Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.8 19.4a6.2 6.2 0 0 1 12.4 0" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M16.4 5.1a3.4 3.4 0 0 1 0 6.6M17.6 14.2a6.2 6.2 0 0 1 3.6 5.2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="4.2" width="20" height="13.4" rx="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.5 20.4h7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-phone-d" viewBox="0 0 24 24"><rect x="6.4" y="2.2" width="11.2" height="19.6" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.6 18.6h2.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-pc" viewBox="0 0 24 24"><rect x="2.4" y="4" width="19.2" height="12.6" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M1 20.2h22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><rect x="2.6" y="7.6" width="18.8" height="9" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 11.4h5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="17.6" cy="12.1" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-stick" viewBox="0 0 24 24"><rect x="3" y="9" width="13.4" height="6" rx="3" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M16.4 12H21" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-tablet" viewBox="0 0 24 24"><rect x="3.6" y="2.4" width="16.8" height="19.2" rx="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M10.6 18.6h2.8" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+  <symbol id="i-cart" viewBox="0 0 24 24"><path d="M2.6 3.4h2.2l2.3 11.1h10.4l2-7.6H6.2" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><circle cx="9" cy="19.4" r="1.7" fill="currentColor"/><circle cx="16.6" cy="19.4" r="1.7" fill="currentColor"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24"><rect x="4.6" y="10" width="14.8" height="11.2" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8.2 10V6.9a3.8 3.8 0 0 1 7.6 0V10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="15.4" r="1.5" fill="currentColor"/></symbol>
+  <symbol id="i-card" viewBox="0 0 24 24"><rect x="2.2" y="5" width="19.6" height="14" rx="2.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M2.2 9.6h19.6" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M6 14.6h4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+  <symbol id="i-paypal" viewBox="0 0 24 24"><title>PayPal</title><path fill="currentColor" d="M15.607 4.653H8.941L6.645 19.251H1.82L4.862 0h7.995c3.754 0 6.375 2.294 6.473 5.513-.648-.478-2.105-.86-3.722-.86m6.57 5.546c0 3.41-3.01 6.853-6.958 6.853h-2.493L11.595 24H6.74l1.845-11.538h3.592c4.208 0 7.346-3.634 7.153-6.949a5.24 5.24 0 0 1 2.848 4.686M9.653 5.546h6.408c.907 0 1.942.222 2.363.541-.195 2.741-2.655 5.483-6.441 5.483H8.714Z"/></symbol>
+  <symbol id="i-visa" viewBox="0 0 24 24"><title>Visa</title><path fill="currentColor" d="M9.112 8.262L5.97 15.758H3.92L2.374 9.775c-.094-.368-.175-.503-.461-.658C1.447 8.864.677 8.627 0 8.479l.046-.217h3.3a.904.904 0 01.894.764l.817 4.338 2.018-5.102zm8.033 5.049c.008-1.979-2.736-2.088-2.717-2.972.006-.269.262-.555.822-.628a3.66 3.66 0 011.913.336l.34-1.59a5.207 5.207 0 00-1.814-.333c-1.917 0-3.266 1.02-3.278 2.479-.012 1.079.963 1.68 1.698 2.04.756.367 1.01.603 1.006.931-.005.504-.602.725-1.16.734-.975.015-1.54-.263-1.992-.473l-.351 1.642c.453.208 1.289.39 2.156.398 2.037 0 3.37-1.006 3.377-2.564m5.061 2.447H24l-1.565-7.496h-1.656a.883.883 0 00-.826.55l-2.909 6.946h2.036l.405-1.12h2.488zm-2.163-2.656l1.02-2.815.588 2.815zm-8.16-4.84l-1.603 7.496H8.34l1.605-7.496z"/></symbol>
+  <symbol id="i-mastercard" viewBox="0 0 24 24"><title>Mastercard</title><path fill="currentColor" d="M11.343 18.031c.058.049.12.098.181.146-1.177.783-2.59 1.238-4.107 1.238C3.32 19.416 0 16.096 0 12c0-4.095 3.32-7.416 7.416-7.416 1.518 0 2.931.456 4.105 1.238-.06.051-.12.098-.165.15C9.6 7.489 8.595 9.688 8.595 12c0 2.311 1.001 4.51 2.748 6.031zm5.241-13.447c-1.52 0-2.931.456-4.105 1.238.06.051.12.098.165.15C14.4 7.489 15.405 9.688 15.405 12c0 2.31-1.001 4.507-2.748 6.031-.058.049-.12.098-.181.146 1.177.783 2.588 1.238 4.107 1.238C20.68 19.416 24 16.096 24 12c0-4.094-3.32-7.416-7.416-7.416zM12 6.174c-.096.075-.189.15-.28.231C10.156 7.764 9.169 9.765 9.169 12c0 2.236.987 4.236 2.551 5.595.09.08.185.158.28.232.096-.074.189-.152.28-.232 1.563-1.359 2.551-3.359 2.551-5.595 0-2.235-.987-4.236-2.551-5.595-.09-.08-.184-.156-.28-.231z"/></symbol>
+  <symbol id="i-done" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="m7.8 12.3 2.9 2.9 5.5-6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="b-samsung" viewBox="0 0 24 24"><title>Samsung</title><path fill="currentColor" d="M19.8166 10.2808l.0459 2.6934h-.023l-.7793-2.6934h-1.2837v3.3925h.8481l-.0458-2.785h.023l.8366 2.785h1.2264v-3.3925zm-16.149 0l-.6418 3.427h.9284l.4699-3.1175h.0229l.4585 3.1174h.9169l-.6304-3.4269zm5.1805 0l-.424 2.6132h-.023l-.424-2.6132H6.5788l-.0688 3.427h.8596l.023-3.0832h.0114l.573 3.0831h.8711l.5731-3.083h.023l.0228 3.083h.8596l-.0802-3.4269zm-7.2664 2.4527c.0343.0802.0229.1949.0114.2522-.0229.1146-.1031.2292-.3324.2292-.2177 0-.3438-.126-.3438-.3095v-.3323H0v.2636c0 .7679.6074.9971 1.2493.9971.6189 0 1.1346-.2178 1.2149-.7794.0458-.298.0114-.4928 0-.5616-.1605-.722-1.467-.9283-1.5588-1.3295-.0114-.0688-.0114-.1375 0-.1834.023-.1146.1032-.2292.3095-.2292.2063 0 .321.126.321.3095v.2063h.8595v-.2407c0-.745-.6762-.8596-1.1576-.8596-.6074 0-1.1117.2063-1.2034.7564-.023.149-.0344.2866.0114.4585.1376.7106 1.364.9169 1.5358 1.3524m11.152 0c.0343.0803.0228.1834.0114.2522-.023.1146-.1032.2292-.3324.2292-.2178 0-.3438-.126-.3438-.3095v-.3323h-.917v.2636c0 .7564.596.9857 1.2379.9857.6189 0 1.1232-.2063 1.2034-.7794.0459-.298.0115-.4814 0-.5616-.1375-.7106-1.4327-.9284-1.5243-1.318-.0115-.0688-.0115-.1376 0-.1835.0229-.1146.1031-.2292.3094-.2292.1948 0 .321.126.321.3095v.2063h.848v-.2407c0-.745-.6647-.8596-1.146-.8596-.6075 0-1.1004.1948-1.192.7564-.023.149-.023.2866.0114.4585.1376.7106 1.341.9054 1.513 1.3524m2.8882.4585c.2407 0 .3094-.1605.3323-.2522.0115-.0343.0115-.0917.0115-.126v-2.533h.871v2.4642c0 .0688 0 .1948-.0114.2292-.0573.6419-.5616.8482-1.192.8482-.6303 0-1.1346-.2063-1.192-.8482 0-.0344-.0114-.1604-.0114-.2292v-2.4642h.871v2.533c0 .0458 0 .0916.0115.126 0 .0917.0688.2522.3095.2522m7.1518-.0344c.2522 0 .3324-.1605.3553-.2522.0115-.0343.0115-.0917.0115-.126v-.4929h-.3553v-.5043H24v.917c0 .0687 0 .1145-.0115.2292-.0573.6303-.596.8481-1.2034.8481-.6075 0-1.1461-.2178-1.2034-.8481-.0115-.1147-.0115-.1605-.0115-.2293v-1.444c0-.0574.0115-.172.0115-.2293.0802-.6419.596-.8482 1.2034-.8482s1.1347.2063 1.2034.8482c.0115.1031.0115.2292.0115.2292v.1146h-.8596v-.1948s0-.0803-.0115-.1261c-.0114-.0802-.0802-.2521-.3438-.2521-.2521 0-.321.1604-.3438.2521-.0115.0458-.0115.1032-.0115.1605v1.5702c0 .0458 0 .0916.0115.126 0 .0917.0917.2522.3323.2522"/></symbol>
+  <symbol id="b-lg" viewBox="0 0 24 24"><title>LG</title><path fill="currentColor" d="M14.522 14.078h3.27v1.33h-4.847v-6.83h1.577v5.5zm6.74-1.274h1.284v1.195c-.236.09-.698.18-1.137.18-1.42 0-1.893-.721-1.893-2.186 0-1.398.45-2.221 1.869-2.221.791 0 1.24.248 1.612.722l.982-.903c-.6-.855-1.646-1.114-2.629-1.114-2.208 0-3.368 1.205-3.368 3.504 0 2.288 1.047 3.528 3.358 3.528 1.06 0 2.096-.27 2.66-.665V11.53h-2.739v1.274zM5.291 6.709a5.29 5.29 0 1 1 0 10.582 5.291 5.291 0 1 1 0-10.582m3.16 8.457a4.445 4.445 0 0 0 1.31-3.161v-.242l-.22.001H6.596v.494h2.662l-.001.015a3.985 3.985 0 0 1-3.965 3.708 3.95 3.95 0 0 1-2.811-1.165 3.952 3.952 0 0 1-1.164-2.811c0-1.061.414-2.059 1.164-2.81a3.951 3.951 0 0 1 2.81-1.164l.252.003v-.495l-.251-.003a4.475 4.475 0 0 0-4.47 4.469c0 1.194.465 2.316 1.309 3.161a4.444 4.444 0 0 0 3.16 1.31 4.444 4.444 0 0 0 3.162-1.31m-2.91-1.297V9.644H5.04v4.72h1.556v-.495H5.543zm-1.265-3.552a.676.676 0 1 0-.675.674.676.676 0 0 0 .675-.674"/></symbol>
+  <symbol id="b-sony" viewBox="0 0 24 24"><title>Sony</title><path fill="currentColor" d="M8.5505 9.8881c.921 0 1.6574.2303 2.2209.7423.3848.3485.5999.8454.5939 1.3665a1.9081 1.9081 0 0 1-.5939 1.3726c-.5272.4848-1.3483.7423-2.221.7423-.8725 0-1.6785-.2575-2.2148-.7423-.3908-.3485-.609-.8484-.603-1.3726 0-.518.2182-1.015.603-1.3665.5-.4545 1.3847-.7423 2.2149-.7423zm.003 3.6692c.4606 0 .8878-.1606 1.1878-.4575.2999-.2999.4332-.6605.4332-1.1029 0-.4242-.1484-.821-.4333-1.1029-.2938-.2908-.7332-.4545-1.1877-.4545s-.8938.1637-1.1907.4545c-.2848.2818-.4333.6787-.4333 1.103-.006.409.1485.806.4333 1.1029.2969.2939.7332.4575 1.1907.4575zm-4.8418-1.9665c.1605.0424.315.094.4666.1636a1.352 1.352 0 0 1 .3787.2576c.197.206.309.4817.306.7665a.9643.9643 0 0 1-.3787.7788 2.0662 2.0662 0 0 1-.709.3485 3.7231 3.7231 0 0 1-1.1938.1697c-.352 0-.5467-.0406-.8138-.0962l-.077-.016c-.294-.0666-.5817-.1575-.8575-.2787a.0695.0695 0 0 0-.0424-.0121c-.0454 0-.0818.0394-.0818.0848v.203H.1212v-1.4786h.5242a.7559.7559 0 0 0 .1363.418c.2121.2607.4394.3607.6575.4395.3666.1212.7514.1848 1.1362.1969.5526 0 .8756-.134.9455-.163l.009-.0037.0062-.0023c.0616-.0226.3119-.1143.3119-.3916 0-.2743-.2338-.334-.387-.373l-.022-.0058c-.1708-.046-.562-.0872-.9897-.1323l-.1526-.016c-.4848-.0515-.9696-.1273-1.1968-.1758-.4977-.1097-.6942-.2917-.816-.4045l-.0082-.0076A1.0192 1.0192 0 0 1 0 11.1608c0-.497.3394-.797.7575-.9817.4454-.2.9756-.288 1.4392-.288.8211.0031 1.4877.2697 1.727.394.097.0515.1455-.0121.1455-.0606v-.1484h.5272v1.2876h-.4727a.9056.9056 0 0 0-.2939-.4909 1.289 1.289 0 0 0-.297-.1787c-.3968-.1667-.821-.2515-1.2513-.2455-.4423 0-.8665.085-1.0786.2153-.1333.0818-.2.1848-.2.306 0 .1727.1454.2424.2182.2636.1967.0597.6328.103.972.1369.0736.0073.1426.0142.2036.0206.3272.0334 1.012.1243 1.315.2zm18.1673-.9966v-.4787H24v.4696h-.4757c-.1727 0-.2424.0334-.3727.1788l-1.4271 1.63a.098.098 0 0 0-.0182.0698v.7423a1.106 1.106 0 0 0 .0121.103.1496.1496 0 0 0 .1.0909.9368.9368 0 0 0 .1303.009h.4848v.4698h-2.5724v-.4697h.4606a.9343.9343 0 0 0 .1302-.0091.1627.1627 0 0 0 .1031-.091.5626.5626 0 0 0 .009-.1v-.7422c0-.0242 0-.0242-.0333-.0636a606.7592 606.7592 0 0 0-1.4119-1.6028c-.0758-.0788-.2061-.2061-.406-.2061h-.4576v-.4696h2.5876v.4696h-.3121c-.0697 0-.1182.0697-.0576.1455 0 0 .8696 1.0392.8787 1.0513.0091.0122.0152.0122.0273.003.0121-.009.8938-1.0453.8999-1.0543a.0912.0912 0 0 0-.0182-.1273.1095.1095 0 0 0-.0606-.0182zm-6.284-.0031h.4848c.2212 0 .2606.0848.2636.2909l.0273 1.5664-2.5815-2.324H11.944v.4697h.412c.297 0 .3182.1636.3182.309v2.2138c.0004.1285.0009.295-.1818.295h-.506v.4667h2.1634v-.4697h-.5273c-.212 0-.2211-.097-.2242-.303v-1.8816l2.9724 2.6511h.7575l-.0394-2.9966c.003-.218.0182-.2908.2424-.2908h.4726v-.4697H15.595Z"/></symbol>
+  <symbol id="b-amazon" viewBox="0 0 24 24"><title>Amazon</title><path fill="currentColor" d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.743-2.64 1.316-4.185 1.726a17.617 17.617 0 01-10.951-.577 17.88 17.88 0 01-5.43-3.35c-.1-.074-.151-.15-.151-.22 0-.047.021-.09.051-.13zm6.565-6.218c0-1.005.247-1.863.743-2.577.495-.71 1.17-1.25 2.04-1.615.796-.335 1.756-.575 2.912-.72.39-.046 1.033-.103 1.92-.174v-.37c0-.93-.105-1.558-.3-1.875-.302-.43-.78-.65-1.44-.65h-.182c-.48.046-.896.196-1.246.46-.35.27-.575.63-.675 1.096-.06.3-.206.465-.435.51l-2.52-.315c-.248-.06-.372-.18-.372-.39 0-.046.007-.09.022-.15.247-1.29.855-2.25 1.82-2.88.976-.616 2.1-.975 3.39-1.05h.54c1.65 0 2.957.434 3.888 1.29.135.15.27.3.405.48.12.165.224.314.283.45.075.134.15.33.195.57.06.254.105.42.135.51.03.104.062.3.076.615.01.313.02.493.02.553v5.28c0 .376.06.72.165 1.036.105.313.21.54.315.674l.51.674c.09.136.136.256.136.36 0 .12-.06.226-.18.314-1.2 1.05-1.86 1.62-1.963 1.71-.165.135-.375.15-.63.045a6.062 6.062 0 01-.526-.496l-.31-.347a9.391 9.391 0 01-.317-.42l-.3-.435c-.81.886-1.603 1.44-2.4 1.665-.494.15-1.093.227-1.83.227-1.11 0-2.04-.343-2.76-1.034-.72-.69-1.08-1.665-1.08-2.94l-.05-.076zm3.753-.438c0 .566.14 1.02.425 1.364.285.34.675.512 1.155.512.045 0 .106-.007.195-.02.09-.016.134-.023.166-.023.614-.16 1.08-.553 1.424-1.178.165-.28.285-.58.36-.91.09-.32.12-.59.135-.8.015-.195.015-.54.015-1.005v-.54c-.84 0-1.484.06-1.92.18-1.275.36-1.92 1.17-1.92 2.43l-.035-.02zm9.162 7.027c.03-.06.075-.11.132-.17.362-.243.714-.41 1.05-.5a8.094 8.094 0 011.612-.24c.14-.012.28 0 .41.03.65.06 1.05.168 1.172.33.063.09.099.228.099.39v.15c0 .51-.149 1.11-.424 1.8-.278.69-.664 1.248-1.156 1.68-.073.06-.14.09-.197.09-.03 0-.06 0-.09-.012-.09-.044-.107-.12-.064-.24.54-1.26.806-2.143.806-2.64 0-.15-.03-.27-.087-.344-.145-.166-.55-.257-1.224-.257-.243 0-.533.016-.87.046-.363.045-.7.09-1 .135-.09 0-.148-.014-.18-.044-.03-.03-.036-.047-.02-.077 0-.017.006-.03.02-.063v-.06z"/></symbol>
+  <symbol id="b-android" viewBox="0 0 24 24"><title>Android</title><path fill="currentColor" d="M18.4395 5.5586c-.675 1.1664-1.352 2.3318-2.0274 3.498-.0366-.0155-.0742-.0286-.1113-.043-1.8249-.6957-3.484-.8-4.42-.787-1.8551.0185-3.3544.4643-4.2597.8203-.084-.1494-1.7526-3.021-2.0215-3.4864a1.1451 1.1451 0 0 0-.1406-.1914c-.3312-.364-.9054-.4859-1.379-.203-.475.282-.7136.9361-.3886 1.5019 1.9466 3.3696-.0966-.2158 1.9473 3.3593.0172.031-.4946.2642-1.3926 1.0177C2.8987 12.176.452 14.772 0 18.9902h24c-.119-1.1108-.3686-2.099-.7461-3.0683-.7438-1.9118-1.8435-3.2928-2.7402-4.1836a12.1048 12.1048 0 0 0-2.1309-1.6875c.6594-1.122 1.312-2.2559 1.9649-3.3848.2077-.3615.1886-.7956-.0079-1.1191a1.1001 1.1001 0 0 0-.8515-.5332c-.5225-.0536-.9392.3128-1.0488.5449zm-.0391 8.461c.3944.5926.324 1.3306-.1563 1.6503-.4799.3197-1.188.0985-1.582-.4941-.3944-.5927-.324-1.3307.1563-1.6504.4727-.315 1.1812-.1086 1.582.4941zM7.207 13.5273c.4803.3197.5506 1.0577.1563 1.6504-.394.5926-1.1038.8138-1.584.4941-.48-.3197-.5503-1.0577-.1563-1.6504.4008-.6021 1.1087-.8106 1.584-.4941z"/></symbol>
+  <symbol id="b-apple" viewBox="0 0 24 24"><title>Apple</title><path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/></symbol>
+  <symbol id="b-appletv" viewBox="0 0 24 24"><title>Apple TV</title><path fill="currentColor" d="M20.57 17.735h-1.815l-3.34-9.203h1.633l2.02 5.987c.075.231.273.9.586 2.012l.297-.997.33-1.006 2.094-6.004H24zm-5.344-.066a5.76 5.76 0 0 1-1.55.207c-1.23 0-1.84-.693-1.84-2.087V9.646h-1.063V8.532h1.121V7.081l1.476-.602v2.062h1.707v1.113H13.38v5.805c0 .446.074.75.214.932.14.182.396.264.75.264.207 0 .495-.041.883-.115zm-7.29-5.343c.017 1.764 1.55 2.358 1.567 2.366-.017.042-.248.842-.808 1.658-.487.71-.99 1.418-1.79 1.435-.783.016-1.03-.462-1.93-.462-.89 0-1.17.445-1.913.478-.758.025-1.344-.775-1.838-1.484-.998-1.451-1.765-4.098-.734-5.88.51-.89 1.426-1.451 2.416-1.46.75-.016 1.468.512 1.93.512.461 0 1.327-.627 2.234-.536.38.016 1.452.157 2.136 1.154-.058.033-1.278.743-1.27 2.219M6.468 7.988c.404-.495.685-1.18.61-1.864-.585.025-1.294.388-1.723.883-.38.437-.71 1.138-.619 1.806.652.05 1.328-.338 1.732-.825Z"/></symbol>
+  <symbol id="b-chromecast" viewBox="0 0 24 24"><title>Chromecast</title><path fill="currentColor" d="M0 18.5455v3.2727h3.2727c0-1.811-1.4618-3.2727-3.2727-3.2727zm0-4.3637v2.1818c3.011 0 5.4545 2.4437 5.4545 5.4546h2.1819c0-4.2218-3.4146-7.6364-7.6364-7.6364zm0-4.3636V12c5.4218 0 9.8182 4.3964 9.8182 9.8182H12c0-6.6327-5.3782-12-12-12zm21.8182-7.6364H2.1818C.9818 2.1818 0 3.1636 0 4.3636v3.2728h2.1818V4.3636h19.6364v15.2728h-7.6364v2.1818h7.6364c1.2 0 2.1818-.9818 2.1818-2.1818V4.3636c0-1.2-.9818-2.1818-2.1818-2.1818Z"/></symbol>
+  <symbol id="b-roku" viewBox="0 0 24 24"><title>Roku</title><path fill="currentColor" d="M16.34 9.853l-2.254 2.254v-2.26H12.13v5.744h1.957v-2.33l2.353 2.33h2.46l-2.988-2.99 2.477-2.476v3.411c0 1.133.679 2.177 2.393 2.177.815 0 1.56-.462 1.922-.88l.88.759H24v-5.74h-1.951v3.718c-.22.384-.528.627-1.002.627-.482 0-.703-.286-.703-1.198V9.853zm-4.591 2.869A3.004 3.004 0 1 1 8.738 9.73a2.997 2.997 0 0 1 3.011 2.99m-3.011-1.57c-.518 0-.956.704-.956 1.572 0 .867.438 1.57.956 1.57.528 0 .968-.702.968-1.57 0-.869-.438-1.572-.968-1.572zm-2.206 4.447H4.313L2.55 13.153h-.594v2.44H0V8.26h2.8c1.616 0 2.935 1.1 2.935 2.45 0 .826-.505 1.562-1.273 2.013l2.07 2.875m-2.75-4.888A1.226 1.226 0 0 0 2.56 9.478h-.604v2.453h.605a1.225 1.225 0 0 0 1.22-1.221Z"/></symbol>
+  <symbol id="b-xbox" viewBox="0 0 24 24"><title>Xbox</title><path fill="currentColor" d="M4.102 21.033C6.211 22.881 8.977 24 12 24c3.026 0 5.789-1.119 7.902-2.967 1.877-1.912-4.316-8.709-7.902-11.417-3.582 2.708-9.779 9.505-7.898 11.417zm11.16-14.406c2.5 2.961 7.484 10.313 6.076 12.912C23.002 17.48 24 14.861 24 12.004c0-3.34-1.365-6.362-3.57-8.536 0 0-.027-.022-.082-.042-.063-.022-.152-.045-.281-.045-.592 0-1.985.434-4.805 3.246zM3.654 3.426c-.057.02-.082.041-.086.042C1.365 5.642 0 8.664 0 12.004c0 2.854.998 5.473 2.661 7.533-1.401-2.605 3.579-9.951 6.08-12.91-2.82-2.813-4.216-3.245-4.806-3.245-.131 0-.223.021-.281.046v-.002zM12 3.551S9.055 1.828 6.755 1.746c-.903-.033-1.454.295-1.521.339C7.379.646 9.659 0 11.984 0H12c2.334 0 4.605.646 6.766 2.085-.068-.046-.615-.372-1.52-.339C14.946 1.828 12 3.545 12 3.545v.006z"/></symbol>
+  <symbol id="b-windows" viewBox="0 0 24 24"><title>Windows</title><path fill="currentColor" d="M0,0H11.377V11.372H0ZM12.623,0H24V11.372H12.623ZM0,12.623H11.377V24H0Zm12.623,0H24V24H12.623"/></symbol>
+  <symbol id="b-linux" viewBox="0 0 24 24"><title>Linux</title><path fill="currentColor" d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.68-.09.189-.136.394-.132.602 0 .199.027.4.055.536.058.399.116.728.04.97-.249.68-.28 1.145-.106 1.484.174.334.535.47.94.601.81.2 1.91.135 2.774.6.926.466 1.866.67 2.616.47.526-.116.97-.464 1.208-.946.587-.003 1.23-.269 2.26-.334.699-.058 1.574.267 2.577.2.025.134.063.198.114.333l.003.003c.391.778 1.113 1.132 1.884 1.071.771-.06 1.592-.536 2.257-1.306.631-.765 1.683-1.084 2.378-1.503.348-.199.629-.469.649-.853.023-.4-.2-.811-.714-1.376v-.097l-.003-.003c-.17-.2-.25-.535-.338-.926-.085-.401-.182-.786-.492-1.046h-.003c-.059-.054-.123-.067-.188-.135a.357.357 0 00-.19-.064c.431-1.278.264-2.55-.173-3.694-.533-1.41-1.465-2.638-2.175-3.483-.796-1.005-1.576-1.957-1.56-3.368.026-2.152.236-6.133-3.544-6.139zm.529 3.405h.013c.213 0 .396.062.584.198.19.135.33.332.438.533.105.259.158.459.166.724 0-.02.006-.04.006-.06v.105a.086.086 0 01-.004-.021l-.004-.024a1.807 1.807 0 01-.15.706.953.953 0 01-.213.335.71.71 0 00-.088-.042c-.104-.045-.198-.064-.284-.133a1.312 1.312 0 00-.22-.066c.05-.06.146-.133.183-.198.053-.128.082-.264.088-.402v-.02a1.21 1.21 0 00-.061-.4c-.045-.134-.101-.2-.183-.333-.084-.066-.167-.132-.267-.132h-.016c-.093 0-.176.03-.262.132a.8.8 0 00-.205.334 1.18 1.18 0 00-.09.4v.019c.002.089.008.179.02.267-.193-.067-.438-.135-.607-.202a1.635 1.635 0 01-.018-.2v-.02a1.772 1.772 0 01.15-.768c.082-.22.232-.406.43-.533a.985.985 0 01.594-.2zm-2.962.059h.036c.142 0 .27.048.399.135.146.129.264.288.344.465.09.199.14.4.153.667v.004c.007.134.006.2-.002.266v.08c-.03.007-.056.018-.083.024-.152.055-.274.135-.393.2.012-.09.013-.18.003-.267v-.015c-.012-.133-.04-.2-.082-.333a.613.613 0 00-.166-.267.248.248 0 00-.183-.064h-.021c-.071.006-.13.04-.186.132a.552.552 0 00-.12.27.944.944 0 00-.023.33v.015c.012.135.037.2.08.334.046.134.098.2.166.268.01.009.02.018.034.024-.07.057-.117.07-.176.136a.304.304 0 01-.131.068 2.62 2.62 0 01-.275-.402 1.772 1.772 0 01-.155-.667 1.759 1.759 0 01.08-.668 1.43 1.43 0 01.283-.535c.128-.133.26-.2.418-.2zm1.37 1.706c.332 0 .733.065 1.216.399.293.2.523.269 1.052.468h.003c.255.136.405.266.478.399v-.131a.571.571 0 01.016.47c-.123.31-.516.643-1.063.842v.002c-.268.135-.501.333-.775.465-.276.135-.588.292-1.012.267a1.139 1.139 0 01-.448-.067 3.566 3.566 0 01-.322-.198c-.195-.135-.363-.332-.612-.465v-.005h-.005c-.4-.246-.616-.512-.686-.71-.07-.268-.005-.47.193-.6.224-.135.38-.271.483-.336.104-.074.143-.102.176-.131h.002v-.003c.169-.202.436-.47.839-.601.139-.036.294-.065.466-.065zm2.8 2.142c.358 1.417 1.196 3.475 1.735 4.473.286.534.855 1.659 1.102 3.024.156-.005.33.018.513.064.646-1.671-.546-3.467-1.089-3.966-.22-.2-.232-.335-.123-.335.59.534 1.365 1.572 1.646 2.757.13.535.16 1.104.021 1.67.067.028.135.06.205.067 1.032.534 1.413.938 1.23 1.537v-.043c-.06-.003-.12 0-.18 0h-.016c.151-.467-.182-.825-1.065-1.224-.915-.4-1.646-.336-1.77.465-.008.043-.013.066-.018.135-.068.023-.139.053-.209.064-.43.268-.662.669-.793 1.187-.13.533-.17 1.156-.205 1.869v.003c-.02.334-.17.838-.319 1.35-1.5 1.072-3.58 1.538-5.348.334a2.645 2.645 0 00-.402-.533 1.45 1.45 0 00-.275-.333c.182 0 .338-.03.465-.067a.615.615 0 00.314-.334c.108-.267 0-.697-.345-1.163-.345-.467-.931-.995-1.788-1.521-.63-.4-.986-.87-1.15-1.396-.165-.534-.143-1.085-.015-1.645.245-1.07.873-2.11 1.274-2.763.107-.065.037.135-.408.974-.396.751-1.14 2.497-.122 3.854a8.123 8.123 0 01.647-2.876c.564-1.278 1.743-3.504 1.836-5.268.048.036.217.135.289.202.218.133.38.333.59.465.21.201.477.335.876.335.039.003.075.006.11.006.412 0 .73-.134.997-.268.29-.134.52-.334.74-.4h.005c.467-.135.835-.402 1.044-.7zm2.185 8.958c.037.6.343 1.245.882 1.377.588.134 1.434-.333 1.791-.765l.211-.01c.315-.007.577.01.847.268l.003.003c.208.199.305.53.391.876.085.4.154.78.409 1.066.486.527.645.906.636 1.14l.003-.007v.018l-.003-.012c-.015.262-.185.396-.498.595-.63.401-1.746.712-2.457 1.57-.618.737-1.37 1.14-2.036 1.191-.664.053-1.237-.2-1.574-.898l-.005-.003c-.21-.4-.12-1.025.056-1.69.176-.668.428-1.344.463-1.897.037-.714.076-1.335.195-1.814.12-.465.308-.797.641-.984l.045-.022zm-10.814.049h.01c.053 0 .105.005.157.014.376.055.706.333 1.023.752l.91 1.664.003.003c.243.533.754 1.064 1.189 1.637.434.598.77 1.131.729 1.57v.006c-.057.744-.48 1.148-1.125 1.294-.645.135-1.52.002-2.395-.464-.968-.536-2.118-.469-2.857-.602-.369-.066-.61-.2-.723-.4-.11-.2-.113-.602.123-1.23v-.004l.002-.003c.117-.334.03-.752-.027-1.118-.055-.401-.083-.71.043-.94.16-.334.396-.4.69-.533.294-.135.64-.202.915-.47h.002v-.002c.256-.268.445-.601.668-.838.19-.201.38-.336.663-.336zm7.159-9.074c-.435.201-.945.535-1.488.535-.542 0-.97-.267-1.28-.466-.154-.134-.28-.268-.373-.335-.164-.134-.144-.333-.074-.333.109.016.129.134.199.2.096.066.215.2.36.333.292.2.68.467 1.167.467.485 0 1.053-.267 1.398-.466.195-.135.445-.334.648-.467.156-.136.149-.267.279-.267.128.016.034.134-.147.332a8.097 8.097 0 01-.69.468zm-1.082-1.583V5.64c-.006-.02.013-.042.029-.05.074-.043.18-.027.26.004.063 0 .16.067.15.135-.006.049-.085.066-.135.066-.055 0-.092-.043-.141-.068-.052-.018-.146-.008-.163-.065zm-.551 0c-.02.058-.113.049-.166.066-.047.025-.086.068-.14.068-.05 0-.13-.02-.136-.068-.01-.066.088-.133.15-.133.08-.031.184-.047.259-.005.019.009.036.03.03.05v.02h.003z"/></symbol>
+  <symbol id="b-pay-card" viewBox="0 0 24 24"><path fill="currentColor" d="M2.4 5h19.2A2.4 2.4 0 0 1 24 7.4v9.2a2.4 2.4 0 0 1-2.4 2.4H2.4A2.4 2.4 0 0 1 0 16.6V7.4A2.4 2.4 0 0 1 2.4 5Zm0 1.6a.8.8 0 0 0-.8.8V9h20.8V7.4a.8.8 0 0 0-.8-.8H2.4ZM22.4 11.4H1.6v5.2c0 .44.36.8.8.8h19.2c.44 0 .8-.36.8-.8v-5.2ZM3.6 13.6h4.8v1.6H3.6v-1.6Z"/></symbol>
+  <symbol id="b-pay-paypal" viewBox="0 0 24 24"><path fill="currentColor" d="M9.3 21.6H6.1a.62.62 0 0 1-.61-.72L8.2 3.55a.86.86 0 0 1 .85-.73h6.2c3.24 0 5.32 1.72 4.83 4.93-.47 3.06-2.78 4.9-6.05 4.9h-2.4a.86.86 0 0 0-.85.73l-.63 4.02-.85 4.2Zm2.62-11.5h1.5c1.74 0 3-.83 3.27-2.53.24-1.55-.66-2.28-2.34-2.28h-1.35a.43.43 0 0 0-.43.37l-.65 4.44ZM5.2 21.6H2.06a.62.62 0 0 1-.61-.72L4.16 3.55a.86.86 0 0 1 .85-.73h1.3L3.6 19.3a1.9 1.9 0 0 0 1.6 2.3Z"/></symbol>
+  <symbol id="b-lock" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.8a4.7 4.7 0 0 1 4.7 4.7V9h.8A2.5 2.5 0 0 1 20 11.5v8A2.5 2.5 0 0 1 17.5 22h-11A2.5 2.5 0 0 1 4 19.5v-8A2.5 2.5 0 0 1 6.5 9h.8V6.5A4.7 4.7 0 0 1 12 1.8Zm0 1.7a3 3 0 0 0-3 3V9h6V6.5a3 3 0 0 0-3-3Zm0 9.3a1.6 1.6 0 0 0-.8 3v1.8a.8.8 0 0 0 1.6 0V15.8a1.6 1.6 0 0 0-.8-3Z"/></symbol>
+
+</svg>
+
+<header class="hdr is-stuck" id="hdr">
+  <div class="wrap hdr__in">
+    <a href="index.html" class="logo" aria-label="France IPTV, accueil">
+      <span class="logo__mark" aria-hidden="true"><svg><use href="#i-logomark"></use></svg></span>
+      <span><b>FRANCE</b> <i>IPTV</i></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="index.html#abonnement">Abonnement</a>
+      <a href="index.html#appareils">Appareils</a>
+      <a href="index.html#tarifs">Tarifs</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="blog.html" class="is-active">Blog</a>
+      <a href="index.html#contact">Contact</a>
+    </nav>
+    <div class="hdr__right">
+      <a class="hdr__wa" href="https://wa.me/16728962871?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20offres." target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
+        <svg><use href="#i-wa"></use></svg><span>WhatsApp &bull; +1 672 896 2871</span></a>
+      <a class="btn btn-gold" href="index.html#tarifs">Commencer</a>
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
+    </div>
+  </div>
+</header>
+<div class="mnav" id="mnav">
+  <a class="mnav__l" href="index.html">Accueil</a>
+  <a class="mnav__l" href="index.html#abonnement">Abonnement IPTV</a>
+  <a class="mnav__l" href="index.html#appareils">Appareils compatibles</a>
+  <a class="mnav__l" href="index.html#tarifs">Tarifs</a>
+  <a class="mnav__l" href="index.html#faq">FAQ</a>
+  <a class="mnav__l" href="blog.html">Blog</a>
+  <a class="mnav__l" href="index.html#contact">Contact</a>
+  <a class="btn btn-wa btn-block btn-lg" href="https://wa.me/16728962871?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20offres." target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg> Nous écrire sur WhatsApp</a>
+</div>
+<main>
+
+<section class="bhero">
+  <div class="bhero__bg" aria-hidden="true"></div>
+  <div class="wrap article">
+    <span class="eyebrow">Installation</span>
+    <h1>Installer une playlist M3U : le guide en français, appareil par appareil</h1>
+    <p class="lead">Une playlist M3U, un lecteur compatible, et cinq minutes. Voici la marche à suivre sur chaque type d'appareil, avec les pièges qui font perdre du temps.</p>
+    <div class="bmeta">
+      <span><svg><use href="#i-clock"></use></svg> 8 min de lecture</span>
+      <span><svg><use href="#i-globe"></use></svg> Guide en français</span>
+      <span><a href="blog.html" style="color:var(--gold);font-weight:700">&larr; Tous les articles</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:22px">
+  <div class="wrap article">
+    <div class="toc">
+      <b>Au sommaire</b>
+      <ol>
+    <li><a href="#m3u">Ce qu'est une playlist M3U</a></li>
+    <li><a href="#prerequis">Ce que vous devez avoir sous la main</a></li>
+    <li><a href="#smarttv">Smart TV Samsung et LG</a></li>
+    <li><a href="#firetv">Fire TV Stick et Android TV</a></li>
+    <li><a href="#mobile">Mobile, tablette et ordinateur</a></li>
+    <li><a href="#vf">Mettre un film en français : pistes audio et sous-titres</a></li>
+    <li><a href="#depannage">Quand ça ne marche pas</a></li>
+      </ol>
+    </div>
+    <div class="prose">
+
+<h2 id="m3u">Ce qu'est une playlist M3U</h2>
+<p>Un fichier <b>M3U</b> est un simple fichier texte qui liste des adresses de flux, avec pour chacune un nom et,
+  souvent, un logo et une catégorie. Ce n'est pas une vidéo : c'est un annuaire. Votre lecteur le lit, affiche la
+  liste des chaînes, et va chercher le flux correspondant quand vous en sélectionnez une.</p>
+<p>À côté du M3U, vous entendrez parler d'<b>EPG</b> (<i>Electronic Program Guide</i>), un second fichier qui remplit
+  la grille horaire : ce qui passe maintenant, ce qui passe ensuite. Les deux se configurent au même endroit dans la
+  plupart des applications.</p>
+
+<h2 id="prerequis">Ce que vous devez avoir sous la main</h2>
+<ul>
+  <li>Vos <b>identifiants de playlist</b> (une URL, ou un identifiant et un mot de passe selon le lecteur).</li>
+  <li>Une <b>application de lecture compatible</b> installée sur l'appareil.</li>
+  <li>Une connexion internet correcte : environ 15 Mb/s pour du HD confortable, davantage pour de la 4K.</li>
+  <li>Cinq minutes de calme. La première installation est la seule qui prend du temps.</li>
+</ul>
+<p>Un conseil qui évite beaucoup d'erreurs : ne retapez jamais l'URL à la main sur un téléviseur. Copiez-collez-la,
+  ou utilisez la fonction de saisie depuis le téléphone si votre application la propose. Une seule lettre de travers
+  et rien ne se charge.</p>
+
+<h2 id="smarttv">Smart TV Samsung et LG</h2>
+<p>Sur les téléviseurs Samsung (Tizen) et LG (webOS), la marche à suivre est la même dans les grandes lignes :</p>
+<ol>
+  <li>Ouvrez le magasin d'applications du téléviseur et installez une application de lecture IPTV compatible.</li>
+  <li>Lancez-la : elle affiche en général un <b>identifiant d'appareil</b> ou une adresse MAC.</li>
+  <li>Renseignez votre playlist là où l'application le demande — soit directement sur le téléviseur, soit via son
+    portail web depuis un ordinateur.</li>
+  <li>Redémarrez l'application. La liste des chaînes se charge.</li>
+</ol>
+<p>Si votre modèle est ancien et que son magasin ne propose plus d'application adaptée, ne cherchez pas midi à
+  quatorze heures : une clé HDMI règle le problème pour une trentaine d'euros.</p>
+
+<h2 id="firetv">Fire TV Stick et Android TV</h2>
+<p>C'est le cas le plus simple, parce que le choix de lecteurs y est le plus large.</p>
+<ol>
+  <li>Installez une application de lecture IPTV depuis le magasin de l'appareil.</li>
+  <li>Ouvrez-la et choisissez d'ajouter une playlist — selon le lecteur, l'option s'appelle <i>Add playlist</i>,
+    <i>Ajouter une liste</i> ou <i>Xtream Codes</i>.</li>
+  <li>Collez l'URL M3U, ou saisissez l'identifiant et le mot de passe fournis.</li>
+  <li>Ajoutez l'EPG si un champ séparé le demande, puis validez.</li>
+</ol>
+<p>Sur Fire TV Stick, pensez à laisser la clé branchée sur un port assez alimenté et, si l'image saccade, testez le
+  Wi-Fi 5 GHz plutôt que le 2,4 GHz : c'est la cause d'un problème de fluidité sur deux.</p>
+
+<h2 id="mobile">Mobile, tablette et ordinateur</h2>
+<p>Sur Android et iOS, les étapes sont identiques à celles d'Android TV : installez un lecteur compatible, ajoutez la
+  playlist, laissez-la se charger. Sur ordinateur, un lecteur multimédia classique sait ouvrir un fichier M3U
+  directement via <i>Média → Ouvrir un flux réseau</i>, ce qui est pratique pour vérifier rapidement qu'une playlist
+  fonctionne avant de l'installer sur le téléviseur.</p>
+<p>C'est d'ailleurs notre astuce préférée en cas de doute : testez toujours sur ordinateur d'abord. Si la playlist
+  fonctionne là et pas sur la télé, le problème vient de l'application ou du réseau, pas de la playlist.</p>
+
+<h2 id="vf">Mettre un film en français : pistes audio et sous-titres</h2>
+<p>La question la plus fréquente après l'installation. Pendant la lecture, ouvrez le menu du lecteur — un appui sur
+  la touche centrale ou un balayage vers le haut selon l'application — puis cherchez <b>Audio</b>, <b>Pistes</b> ou
+  une icône de haut-parleur. Sélectionnez la piste française. Le menu voisin, <b>Sous-titres</b>, fonctionne de la
+  même façon.</p>
+<p>La plupart des lecteurs mémorisent ce choix et appliquent la même préférence aux lectures suivantes. Si les
+  contenus sont classés par catégories, une rubrique <b>VF</b> ou <b>Films français</b> regroupe généralement les
+  versions françaises, ce qui évite d'avoir à changer la piste à chaque fois.</p>
+
+<h2 id="depannage">Quand ça ne marche pas</h2>
+<ul>
+  <li><b>Rien ne se charge</b> : l'URL comporte presque toujours une faute de frappe. Copiez-collez-la à nouveau.</li>
+  <li><b>La liste se charge mais aucune chaîne ne démarre</b> : vérifiez que vous ne dépassez pas le nombre de
+    connexions simultanées de votre offre. Un flux resté ouvert sur un autre appareil compte.</li>
+  <li><b>L'image saccade</b> : testez sur un autre appareil et, si possible, en Ethernet. Cela distingue un problème
+    de réseau d'un problème de source.</li>
+  <li><b>Le guide des programmes est vide</b> : l'EPG n'a pas été renseigné, ou met simplement quelques minutes à se
+    charger la première fois.</li>
+</ul>
+<p>Et si rien de tout cela ne suffit : écrivez-nous sur WhatsApp en indiquant votre appareil, l'application utilisée
+  et ce qui s'affiche exactement à l'écran. Avec ces trois informations, le dépannage prend en général deux
+  minutes.</p>
+
+    </div>
+
+    <div class="cta-band">
+      <span class="eyebrow">Prêt à commencer ?</span>
+      <h2 style="margin-top:18px">Une question avant de choisir ?</h2>
+      <p>Dites-nous quel appareil vous utilisez et combien de personnes regardent en même temps chez vous. Nous vous
+        dirons quelle offre a du sens — et laquelle n'en a pas.</p>
+      <a class="btn btn-wa btn-lg btn-block" href="https://wa.me/16728962871?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20offres." target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg> Écrire sur WhatsApp</a>
+      <small>+1 672 896 2871 &bull; réponse en général en quelques minutes</small>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__grid">
+      <div class="ftr__about">
+        <a href="index.html" class="logo">
+          <span class="logo__mark" aria-hidden="true"><svg><use href="#i-logomark"></use></svg></span>
+          <span><b>FRANCE</b> <i>IPTV</i></span>
+        </a>
+        <p>Un service d'abonnement IPTV pensé pour la France : installation simple, large compatibilité et une
+          assistance assurée par de vraies personnes.</p>
+        <a class="ftr__wa" href="https://wa.me/16728962871?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20offres." target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg> +1 672 896 2871</a>
+      </div>
+      <div><h4>Navigation</h4><ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#abonnement">Abonnement IPTV</a></li>
+        <li><a href="index.html#appareils">Appareils</a></li>
+        <li><a href="index.html#tarifs">Tarifs</a></li>
+      </ul></div>
+      <div><h4>En savoir plus</h4><ul>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="index.html#guide">Guide IPTV</a></li>
+        <li><a href="index.html#faq">FAQ</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul></div>
+      <div><h4>Assistance</h4><ul>
+        <li><a href="https://wa.me/16728962871?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20offres." target="_blank" rel="noopener">Assistance WhatsApp</a></li>
+        <li><a href="blog-installer-playlist-m3u.html">Installer une playlist M3U</a></li>
+        <li><a href="blog-meilleur-iptv-france.html">Quel IPTV choisir</a></li>
+        <li><a href="blog-iptv-legal-france.html">IPTV et légalité</a></li>
+      </ul></div>
+    </div>
+    <p class="disclaimer">France IPTV fournit une prestation technique et une configuration de playlist ; le service
+      ne vend ni ne cède aucun droit sur des contenus appartenant à des tiers. Il appartient au client de n'accéder
+      qu'aux contenus qu'il est légalement autorisé à regarder. Les noms de chaînes, titres de programmes et visuels
+      éventuellement présentés sur ce site sont des exemples génériques créés à titre d'illustration.</p>
+    <div class="ftr__bot">
+      <span>&copy; <span id="yr">2026</span> France IPTV &mdash; france-iptv.website</span>
+      <span>Fait pour la France &bull; assistance en français</span>
+    </div>
+  </div>
+</footer>
+<div class="wa" id="wa">
+  <div class="wa__panel" id="waPanel" role="dialog" aria-label="Discuter sur WhatsApp">
+    <div class="wa__head">
+      <span class="wa__av"><svg><use href="#i-wa"></use></svg></span>
+      <span><b>France IPTV</b><small>Nous répondons en général vite</small></span>
+      <button class="wa__x" id="waClose" aria-label="Fermer">&times;</button>
+    </div>
+    <div class="wa__body">
+      <div class="wa__msg">Bonjour 👋<br>Une question sur une offre, une installation ou une commande en cours ?
+        Écrivez-nous, une personne réelle vous répond.<span class="wa__time">En ligne</span></div>
+    </div>
+    <div class="wa__foot">
+      <a class="btn btn-wa btn-lg btn-block" href="https://wa.me/16728962871?text=Bonjour%2C%20j%27ai%20une%20question%20sur%20vos%20offres." target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg> Démarrer la discussion</a>
+      <p>Vous serez redirigé vers WhatsApp.<br>+1 672 896 2871</p>
+    </div>
+  </div>
+  <button class="wa__bubble" id="waBubble" aria-label="Ouvrir la discussion WhatsApp" aria-expanded="false" aria-controls="waPanel">
+    <svg><use href="#i-wa"></use></svg><span class="wa__dot" aria-hidden="true">1</span>
+  </button>
+</div>
+<script>
+(function(){
+  'use strict';
+  var $  = function(s,c){ return (c||document).querySelector(s); };
+  var $$ = function(s,c){ return Array.prototype.slice.call((c||document).querySelectorAll(s)); };
+
+  /* ---------- year ---------- */
+  var yr = $('#yr'); if(yr) yr.textContent = new Date().getFullYear();
+
+  /* ---------- sticky header ---------- */
+  var hdr = $('#hdr');
+  var onScroll = function(){
+    if(hdr) hdr.classList.toggle('is-stuck', window.scrollY > 24);
+    spy();
+  };
+
+  /* ---------- scroll spy ---------- */
+  var links = $$('.nav a[href^="#"]');
+  var spy = function(){
+    var y = window.scrollY + 130, cur = null;
+    links.forEach(function(a){
+      var sec = document.getElementById(a.getAttribute('href').slice(1));
+      if(sec && sec.offsetTop <= y) cur = a;
+    });
+    links.forEach(function(a){ a.classList.toggle('is-active', a === cur); });
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  /* ---------- mobile menu ---------- */
+  var burger = $('#burger'), mnav = $('#mnav'), waWrap = $('#wa');
+  var setMenu = function(open){
+    if(!burger || !mnav) return;
+    burger.classList.toggle('is-open', open);
+    mnav.classList.toggle('is-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    document.body.style.overflow = open ? 'hidden' : '';
+    if(waWrap) waWrap.style.display = open ? 'none' : '';   /* never cover the menu */
+  };
+  if(burger) burger.addEventListener('click', function(){ setMenu(!mnav.classList.contains('is-open')); });
+  $$('#mnav a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+
+  /* ---------- reveal on scroll ---------- */
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+    }, {rootMargin:'0px 0px -8% 0px', threshold:.08});
+    $$('.rv').forEach(function(el, i){ el.style.transitionDelay = (Math.min(i,6) * 40) + 'ms'; io.observe(el); });
+  } else {
+    $$('.rv').forEach(function(el){ el.classList.add('in'); });
+  }
+
+  /* ---------- FAQ accordion ---------- */
+  $$('.acc').forEach(function(acc){
+    var q = $('.acc__q', acc), panel = $('.acc__a', acc);
+    if(!q || !panel) return;
+    q.addEventListener('click', function(){
+      var open = acc.classList.contains('is-open');
+      $$('.acc.is-open').forEach(function(o){
+        o.classList.remove('is-open');
+        $('.acc__a', o).style.maxHeight = '';
+        $('.acc__q', o).setAttribute('aria-expanded','false');
+      });
+      if(!open){
+        acc.classList.add('is-open');
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+        q.setAttribute('aria-expanded','true');
+      }
+    });
+  });
+
+  /* ============================================================
+     COMMANDE — WhatsApp uniquement. Pas de formulaire, pas de
+     page de paiement, aucune donnée personnelle collectée ici.
+     ============================================================ */
+  var WA_PHONE = '16728962871';
+
+  var PLANS = {
+    bronze:    {name:'Bronze',    months:12, bonus:0, price:39.99},
+    gold:      {name:'Gold',      months:15, bonus:3, price:49.99},
+    platinum:  {name:'Platinum',  months:15, bonus:3, price:59.99},
+    exclusive: {name:'Exclusive', months:24, bonus:3, price:84.99}
+  };
+  var EXTRA = 0.85;   /* chaque connexion supplémentaire : -15 % */
+  var MAXQ  = 5;      /* connexions maximum */
+
+  var totalFor = function(base, qty){ return base * (1 + EXTRA * (qty - 1)); };
+  var eur      = function(n){ return n.toFixed(2).replace('.', ',') + ' €'; };
+  var termLabel = function(p){ return p.months + ' mois' + (p.bonus ? ' +' + p.bonus + ' offerts' : ''); };
+
+  var waOrderUrl = function(key, qty){
+    var p = PLANS[key]; if(!p) return 'https://wa.me/' + WA_PHONE;
+    var t = totalFor(p.price, qty);
+    var txt = 'Bonjour, je suis intéressé par l\'offre ' + p.name + ' (' + termLabel(p) + ') avec '
+            + qty + ' connexion' + (qty === 1 ? '' : 's')
+            + ' — total ' + t.toFixed(2).replace('.', ',') + ' EUR. Merci de m\'envoyer les détails.';
+    return 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(txt);
+  };
+
+  /* ---------- compteur de connexions sur chaque offre ---------- */
+  var CARDS = {};   /* clé -> { qty: n } , lu par la fenêtre de commande */
+
+  $$('.plan[data-card]').forEach(function(cardEl){
+    var key   = cardEl.dataset.card;
+    var base  = PLANS[key].price;
+    var state = CARDS[key] = {qty:1};
+    var out   = $('[data-price]', cardEl);
+    var qOut  = $('[data-qty]', cardEl);
+    var qLab  = $('[data-qtylabel]', cardEl);
+    var minus = $('[data-step="-1"]', cardEl);
+    var plus  = $('[data-step="1"]', cardEl);
+    var link  = $('[data-buy]', cardEl);
+
+    var paint = function(){
+      out.textContent  = eur(totalFor(base, state.qty));
+      qOut.textContent = state.qty;
+      qLab.textContent = state.qty === 1 ? 'connexion' : 'connexions';
+      minus.disabled = state.qty <= 1;
+      plus.disabled  = state.qty >= MAXQ;
+      /* le lien reste un vrai lien WhatsApp : il fonctionne même sans JavaScript */
+      if(link) link.href = waOrderUrl(key, state.qty);
+    };
+    minus.addEventListener('click', function(){ if(state.qty > 1){ state.qty--; paint(); } });
+    plus .addEventListener('click', function(){ if(state.qty < MAXQ){ state.qty++; paint(); } });
+    paint();
+  });
+
+  /* ============================================================
+     FENÊTRE DE COMMANDE (checkout)
+     Aucun numéro de carte n'est demandé ni traité sur ce site :
+     le formulaire ne recueille que le nom, l'e-mail, le téléphone
+     et le mode de paiement souhaité (carte bancaire ou PayPal).
+
+     ENREGISTREMENT DES COMMANDES
+     Chaque commande est ajoutée à votre Google Sheet et vous est
+     envoyée par e-mail, via un script Google Apps Script déployé
+     en « application web ». Collez ci-dessous l'URL /exec que
+     Google vous donne à la fin du déploiement (voir le README,
+     section 5b — le code du script est dans _build/google-sheet/).
+
+     Si l'URL est vide, ou si l'envoi échoue, la commande part
+     quand même sur WhatsApp : vous ne perdez jamais une vente.
+     ============================================================ */
+  var ORDER_ENDPOINT = 'https://script.google.com/macros/s/AKfycbwA3HmyJoR_SijlkVSNFL6JpV4i0e1uhZIUj6AgS6YfTyRDryjDQBpfqbNs8G0eH7qN/exec';
+  var ORDER_TOKEN    = 'fr-iptv-2026';        /* doit être identique à TOKEN dans Code.gs */
+
+  var co       = $('#co');
+  var coForm   = $('#coForm');
+  var stepForm = $('[data-co-step="form"]', co);
+  var stepDone = $('[data-co-step="done"]', co);
+  var current  = {key:'gold', qty:1};
+  var lastFocus = null;
+
+  var planLabel = function(p){
+    return p.name + ' — ' + p.months + ' mois' + (p.bonus ? ' (+' + p.bonus + ' mois offerts)' : '');
+  };
+
+  var fillSummary = function(){
+    var p = PLANS[current.key];
+    var t = totalFor(p.price, current.qty);
+    $('[data-sum-plan]',  co).textContent = planLabel(p);
+    $('[data-sum-qty]',   co).textContent = current.qty + (current.qty === 1 ? ' connexion simultanée' : ' connexions simultanées');
+    $('[data-sum-total]', co).textContent = eur(t);
+  };
+
+  var openCo = function(key, qty){
+    if(!co || !PLANS[key]) return;
+    lastFocus = document.activeElement;
+    current.key = key;
+    current.qty = qty || 1;
+    stepDone.hidden = true;
+    stepForm.hidden = false;
+    fillSummary();
+    co.classList.add('is-open');
+    co.setAttribute('aria-hidden','false');
+    document.body.style.overflow = 'hidden';
+    setTimeout(function(){ var f = $('#coName'); if(f) f.focus(); }, 60);
+  };
+
+  var closeCo = function(){
+    if(!co) return;
+    co.classList.remove('is-open');
+    co.setAttribute('aria-hidden','true');
+    document.body.style.overflow = '';
+    if(lastFocus && lastFocus.focus) lastFocus.focus();
+  };
+
+  $$('[data-buy]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      if(!co) return;                      /* sans la fenêtre, le lien WhatsApp s'ouvre */
+      e.preventDefault();
+      var key = a.dataset.buy;
+      openCo(key, (CARDS[key] && CARDS[key].qty) || 1);
+    });
+  });
+  $$('[data-co-close]').forEach(function(b){ b.addEventListener('click', closeCo); });
+
+  /* ---------- validation ---------- */
+  var setErr = function(input, msg){
+    var box = $('[data-err-for="' + input.id + '"]', co);
+    if(box){ box.textContent = msg || ''; box.classList.toggle('is-on', !!msg); }
+    input.setAttribute('aria-invalid', msg ? 'true' : 'false');
+  };
+
+  var validate = function(){
+    var ok = true, first = null;
+    var name = $('#coName'), mail = $('#coMail'), tel = $('#coTel');
+
+    if(name.value.trim().length < 2){ setErr(name, 'Merci d\'indiquer votre nom complet.'); ok = false; first = first || name; }
+    else setErr(name, '');
+
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(mail.value.trim())){
+      setErr(mail, 'Cette adresse e-mail ne semble pas valide.'); ok = false; first = first || mail;
+    } else setErr(mail, '');
+
+    if(tel.value.replace(/[^0-9]/g, '').length < 6){
+      setErr(tel, 'Merci d\'indiquer un numéro de téléphone valide.'); ok = false; first = first || tel;
+    } else setErr(tel, '');
+
+    if(first) first.focus();
+    return ok;
+  };
+
+  var orderText = function(d){
+    return 'Bonjour, je souhaite commander l\'offre ' + d.plan + '.'
+         + '\nConnexions : ' + d.qty
+         + '\nTotal : ' + d.total
+         + '\nNom : ' + d.name
+         + '\nE-mail : ' + d.email
+         + '\nTéléphone : ' + d.phone
+         + '\nPaiement : ' + d.pay
+         + '\nMerci de m\'envoyer les instructions de paiement.';
+  };
+
+  /* ---------- envoi vers Google Sheets ----------
+     Encodage « form-urlencoded » volontaire : c'est une requête simple,
+     donc pas de pré-vol CORS, ce que les Web Apps Apps Script ne gèrent
+     pas. sendBeacon part même si l'onglet WhatsApp s'ouvre juste après ;
+     fetch sert de filet quand sendBeacon n'existe pas. */
+  var sendOrder = function(d){
+    if(!ORDER_ENDPOINT) return;
+
+    var f = {
+      token:      ORDER_TOKEN,
+      nom:        d.name,
+      email:      d.email,
+      telephone:  d.phone,
+      formule:    d.plan,
+      prix:       d.priceNum,       /* nombre brut : la colonne reste sommable */
+      prix_texte: d.total,
+      connexions: d.qty,
+      paiement:   d.pay,
+      statut:     'En attente de paiement',
+      source:     'france-iptv.website'
+    };
+
+    var body = Object.keys(f).map(function(k){
+      return encodeURIComponent(k) + '=' + encodeURIComponent(f[k] == null ? '' : f[k]);
+    }).join('&');
+
+    try{
+      if(navigator.sendBeacon){
+        var blob = new Blob([body], {type:'application/x-www-form-urlencoded;charset=UTF-8'});
+        if(navigator.sendBeacon(ORDER_ENDPOINT, blob)) return;
+      }
+    }catch(err){}
+
+    try{
+      fetch(ORDER_ENDPOINT, {
+        method:'POST', mode:'no-cors', keepalive:true,
+        headers:{'Content-Type':'application/x-www-form-urlencoded;charset=UTF-8'},
+        body: body
+      }).catch(function(){});
+    }catch(err){}
+  };
+
+  if(coForm) coForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    if(coForm.societe && coForm.societe.value) return;     /* piège à robots */
+    if(!validate()) return;
+
+    var p    = PLANS[current.key];
+    var t    = totalFor(p.price, current.qty);
+    var pay  = (coForm.querySelector('input[name="paiement"]:checked') || {}).value || 'Carte bancaire';
+    var data = {
+      plan:     planLabel(p),
+      qty:      current.qty,
+      total:    eur(t),
+      priceNum: t.toFixed(2),
+      name:  $('#coName').value.trim(),
+      email: $('#coMail').value.trim(),
+      phone: $('#coDial').value + ' ' + $('#coTel').value.trim(),
+      pay:   pay
+    };
+
+    var url = 'https://wa.me/' + WA_PHONE + '?text=' + encodeURIComponent(orderText(data));
+
+    sendOrder(data);
+
+    /* confirmation */
+    $('[data-done-name]',  co).textContent = data.name.split(' ')[0];
+    $('[data-done-plan]',  co).textContent = data.plan;
+    $('[data-done-pay]',   co).textContent = data.pay;
+    $('[data-done-total]', co).textContent = data.total;
+    $('[data-done-wa]',    co).href        = url;
+    stepForm.hidden = true;
+    stepDone.hidden = false;
+    co.querySelector('.co__panel').scrollTop = 0;
+
+    window.open(url, '_blank', 'noopener');
+  });
+
+  /* ---------- widget WhatsApp flottant ---------- */
+  var bubble = $('#waBubble'), panel = $('#waPanel'), closeBtn = $('#waClose');
+  var setPanel = function(open){
+    if(!panel || !bubble) return;
+    panel.classList.toggle('is-open', open);
+    bubble.setAttribute('aria-expanded', open ? 'true' : 'false');
+  };
+  if(bubble) bubble.addEventListener('click', function(){ setPanel(!panel.classList.contains('is-open')); });
+  if(closeBtn) closeBtn.addEventListener('click', function(){ setPanel(false); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape'){ setPanel(false); setMenu(false); closeCo(); } });
+  document.addEventListener('click', function(e){
+    if(co && co.classList.contains('is-open')) return;
+    if(panel && panel.classList.contains('is-open') && !e.target.closest('#wa')) setPanel(false);
+  });
+
+  /* s'ouvre une seule fois par session, après 12 s */
+  try{
+    if(!sessionStorage.getItem('waSeen')){
+      setTimeout(function(){
+        if((!mnav || !mnav.classList.contains('is-open')) && !(co && co.classList.contains('is-open'))){
+          setPanel(true);
+          try{ sessionStorage.setItem('waSeen','1'); }catch(err){}
+        }
+      }, 12000);
+    }
+  }catch(err){}
+})();
+
+</script>
+</body>
+</html>

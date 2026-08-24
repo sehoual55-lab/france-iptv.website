@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://france-iptv.website/sitemap.xml
