@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://france-iptv.website/sitemap.xml
+Sitemap: https://guide-iptv.fr/sitemap.xml

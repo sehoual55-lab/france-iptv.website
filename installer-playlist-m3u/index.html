@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#FBFAF7">
+<title>Installer une playlist M3U, appareil par appareil | Guide IPTV</title>
+<meta name="description" content="Comment charger une playlist M3U dans un IPTV player en français sur Smart TV, Fire TV Stick, Android TV, mobile et ordinateur, et régler les pistes audio VF.">
+<link rel="canonical" href="https://guide-iptv.fr/installer-playlist-m3u/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="alternate" hreflang="fr" href="https://guide-iptv.fr/installer-playlist-m3u/">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Guide IPTV">
+<meta property="og:url" content="https://guide-iptv.fr/installer-playlist-m3u/">
+<meta property="og:title" content="Installer une playlist M3U, appareil par appareil | Guide IPTV">
+<meta property="og:description" content="Comment charger une playlist M3U dans un IPTV player en français sur Smart TV, Fire TV Stick, Android TV, mobile et ordinateur, et régler les pistes audio VF.">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Installer une playlist M3U : le guide en français, appareil par appareil","description":"Comment charger une playlist M3U dans un IPTV player en français sur Smart TV, Fire TV Stick, Android TV, mobile et ordinateur, et régler les pistes audio VF.",
+"inLanguage":"fr-FR","mainEntityOfPage":"https://guide-iptv.fr/installer-playlist-m3u/","isAccessibleForFree":true,
+"publisher":{"@type":"Organization","name":"Guide IPTV","url":"https://guide-iptv.fr/"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Accueil","item":"https://guide-iptv.fr/"},
+{"@type":"ListItem","position":2,"name":"Installer une playlist M3U : le guide en français, appareil par appareil"}]}
+</script>
+<style>
+:root{
+  --paper:#FBFAF7; --paper-2:#F3F1EA; --card:#FFFFFF;
+  --ink:#1C1B18;   --body:#3E3B35;   --muted:#6E6A61; --faint:#9C978C;
+  --rule:#E2DED3;  --rule-2:#EFECE3;
+  --accent:#2F5D50; --accent-hi:#3E7A69; --accent-soft:#EAF1EE;
+  --r-s:8px; --r-m:12px; --r-l:18px;
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:88px;-webkit-text-size-adjust:100%}
+body{
+  font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  background:var(--paper);color:var(--body);line-height:1.72;font-size:17px;
+  overflow-x:clip;-webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3{font-family:"Source Serif 4",Georgia,serif;color:var(--ink);line-height:1.2;letter-spacing:-.015em;font-weight:600}
+::selection{background:var(--accent-soft)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1080px,100% - 40px);margin-inline:auto}
+.narrow{width:min(680px,100% - 40px);margin-inline:auto}
+
+/* ---------------- header ---------------- */
+.hdr{position:sticky;top:0;z-index:50;background:rgba(251,250,247,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+.hdr__in{display:flex;align-items:center;justify-content:space-between;gap:24px;height:64px}
+.logo{display:inline-flex;align-items:baseline;gap:8px;text-decoration:none;font-family:"Source Serif 4",Georgia,serif;font-size:19px;font-weight:600;color:var(--ink)}
+.logo i{font-style:normal;color:var(--accent)}
+.nav{display:flex;gap:26px;font-size:15px}
+.nav a{color:var(--muted);text-decoration:none;transition:color .2s var(--ease)}
+.nav a:hover,.nav a.is-active{color:var(--accent)}
+@media(max-width:680px){.nav{gap:18px;font-size:14px}.logo{font-size:17px}}
+
+/* ---------------- hero ---------------- */
+.hero{padding:76px 0 52px;border-bottom:1px solid var(--rule)}
+.hero h1{font-size:clamp(32px,5vw,50px);max-width:16ch;margin-bottom:20px}
+.hero p{font-size:19px;color:var(--muted);max-width:60ch}
+.kicker{display:inline-block;font-family:Inter,sans-serif;font-size:12px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:18px}
+
+/* ---------------- article list ---------------- */
+.list{padding:56px 0 84px}
+.entry{display:block;text-decoration:none;padding:30px 0;border-bottom:1px solid var(--rule-2);transition:.25s var(--ease)}
+.entry:hover{padding-left:8px}
+.entry:hover h2{color:var(--accent)}
+.entry h2{font-size:24px;margin-bottom:9px;transition:color .25s var(--ease)}
+.entry p{color:var(--muted);font-size:16px;max-width:68ch}
+.entry .meta{display:flex;gap:14px;font-size:13px;color:var(--faint);margin-top:12px;font-family:Inter,sans-serif}
+
+/* ---------------- article page ---------------- */
+.ahero{padding:64px 0 34px}
+.ahero h1{font-size:clamp(29px,4.4vw,42px);max-width:22ch;margin-bottom:18px}
+.ahero .lead{font-size:19.5px;color:var(--muted);line-height:1.62}
+.ahero .meta{display:flex;gap:16px;font-size:13.5px;color:var(--faint);margin-top:22px;flex-wrap:wrap}
+.toc{background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r-l);padding:24px 26px;margin:14px 0 42px}
+.toc b{display:block;font-family:Inter,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.toc ol{margin-left:18px;font-size:15.5px;line-height:1.9}
+.toc a{color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--accent);text-decoration:underline}
+.prose{padding-bottom:34px}
+.prose h2{font-size:27px;margin:46px 0 16px;padding-top:6px}
+.prose p{margin-bottom:19px}
+.prose ul,.prose ol{margin:0 0 22px 22px}
+.prose li{margin-bottom:10px}
+.prose b{color:var(--ink);font-weight:600}
+.prose i{color:var(--muted)}
+.prose a{color:var(--accent);text-decoration:underline;text-underline-offset:2px;text-decoration-thickness:1px}
+.prose a:hover{background:var(--accent-soft)}
+.next{margin:44px 0 76px;padding:28px 30px;background:var(--paper-2);border:1px solid var(--rule);border-radius:var(--r-l)}
+.next b{display:block;font-family:Inter,sans-serif;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.next ul{list-style:none;margin:0}
+.next li{margin-bottom:9px}
+.next a{color:var(--ink);text-decoration:none;font-weight:500}
+.next a:hover{color:var(--accent);text-decoration:underline}
+
+/* ---------------- footer ---------------- */
+.ftr{border-top:1px solid var(--rule);padding:44px 0 56px;font-size:14.5px;color:var(--muted)}
+.ftr__nav{display:flex;flex-wrap:wrap;gap:20px;margin-bottom:22px}
+.ftr__nav a{color:var(--muted);text-decoration:none}
+.ftr__nav a:hover{color:var(--accent)}
+.ftr .note{font-size:13.5px;color:var(--faint);max-width:76ch;line-height:1.7}
+.ftr .bot{margin-top:22px;padding-top:18px;border-top:1px solid var(--rule-2);font-size:13.5px;color:var(--faint)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="hdr">
+  <div class="wrap hdr__in">
+    <a class="logo" href="/"><span>Guide</span><i> IPTV</i></a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="/">Tous les guides</a>
+      <a href="/comment-fonctionne-iptv/">Comprendre</a>
+      <a href="/installer-playlist-m3u/">Installer</a>
+      <a href="/iptv-legal-france/">Cadre légal</a>
+    </nav>
+  </div>
+</header>
+<main>
+
+<section class="ahero">
+  <div class="narrow">
+    <span class="kicker">Installation</span>
+    <h1>Installer une playlist M3U : le guide en français, appareil par appareil</h1>
+    <p class="lead">Une playlist M3U, un lecteur compatible, et cinq minutes. Voici la marche à suivre sur chaque type d'appareil, avec les pièges qui font perdre du temps.</p>
+    <div class="meta"><span>8 min de lecture</span><span>Guide en français</span><span><a href="/" style="color:var(--accent)">&larr; Tous les guides</a></span></div>
+  </div>
+</section>
+<section>
+  <div class="narrow">
+    <div class="toc">
+      <b>Au sommaire</b>
+      <ol>
+      <li><a href="#m3u">Ce qu'est une playlist M3U</a></li>
+      <li><a href="#prerequis">Ce que vous devez avoir sous la main</a></li>
+      <li><a href="#smarttv">Smart TV Samsung et LG</a></li>
+      <li><a href="#firetv">Fire TV Stick et Android TV</a></li>
+      <li><a href="#mobile">Mobile, tablette et ordinateur</a></li>
+      <li><a href="#vf">Mettre un film en français : pistes audio et sous-titres</a></li>
+      <li><a href="#depannage">Quand ça ne marche pas</a></li>
+      </ol>
+    </div>
+    <div class="prose">
+
+<h2 id="m3u">Ce qu'est une playlist M3U</h2>
+<p>Un fichier <b>M3U</b> est un simple fichier texte qui liste des adresses de flux, avec pour chacune un nom et,
+  souvent, un logo et une catégorie. Ce n'est pas une vidéo : c'est un annuaire. Votre lecteur le lit, affiche la
+  liste des chaînes, et va chercher le flux correspondant quand vous en sélectionnez une.</p>
+<p>À côté du M3U, vous entendrez parler d'<b>EPG</b> (<i>Electronic Program Guide</i>), un second fichier qui remplit
+  la grille horaire : ce qui passe maintenant, ce qui passe ensuite. Les deux se configurent au même endroit dans la
+  plupart des applications.</p>
+
+<h2 id="prerequis">Ce que vous devez avoir sous la main</h2>
+<ul>
+  <li>Vos <b>identifiants de playlist</b> (une URL, ou un identifiant et un mot de passe selon le lecteur).</li>
+  <li>Une <b>application de lecture compatible</b> installée sur l'appareil.</li>
+  <li>Une connexion internet correcte : environ 15 Mb/s pour du HD confortable, davantage pour de la 4K.</li>
+  <li>Cinq minutes de calme. La première installation est la seule qui prend du temps.</li>
+</ul>
+<p>Un conseil qui évite beaucoup d'erreurs : ne retapez jamais l'URL à la main sur un téléviseur. Copiez-collez-la,
+  ou utilisez la fonction de saisie depuis le téléphone si votre application la propose. Une seule lettre de travers
+  et rien ne se charge.</p>
+
+<h2 id="smarttv">Smart TV Samsung et LG</h2>
+<p>Sur les téléviseurs Samsung (Tizen) et LG (webOS), la marche à suivre est la même dans les grandes lignes :</p>
+<ol>
+  <li>Ouvrez le magasin d'applications du téléviseur et installez une application de lecture IPTV compatible.</li>
+  <li>Lancez-la : elle affiche en général un <b>identifiant d'appareil</b> ou une adresse MAC.</li>
+  <li>Renseignez votre playlist là où l'application le demande — soit directement sur le téléviseur, soit via son
+    portail web depuis un ordinateur.</li>
+  <li>Redémarrez l'application. La liste des chaînes se charge.</li>
+</ol>
+<p>Si votre modèle est ancien et que son magasin ne propose plus d'application adaptée, ne cherchez pas midi à
+  quatorze heures : une clé HDMI règle le problème pour une trentaine d'euros.</p>
+
+<h2 id="firetv">Fire TV Stick et Android TV</h2>
+<p>C'est le cas le plus simple, parce que le choix de lecteurs y est le plus large.</p>
+<ol>
+  <li>Installez une application de lecture IPTV depuis le magasin de l'appareil.</li>
+  <li>Ouvrez-la et choisissez d'ajouter une playlist — selon le lecteur, l'option s'appelle <i>Add playlist</i>,
+    <i>Ajouter une liste</i> ou <i>Xtream Codes</i>.</li>
+  <li>Collez l'URL M3U, ou saisissez l'identifiant et le mot de passe fournis.</li>
+  <li>Ajoutez l'EPG si un champ séparé le demande, puis validez.</li>
+</ol>
+<p>Sur Fire TV Stick, pensez à laisser la clé branchée sur un port assez alimenté et, si l'image saccade, testez le
+  Wi-Fi 5 GHz plutôt que le 2,4 GHz : c'est la cause d'un problème de fluidité sur deux.</p>
+
+<h2 id="mobile">Mobile, tablette et ordinateur</h2>
+<p>Sur Android et iOS, les étapes sont identiques à celles d'Android TV : installez un lecteur compatible, ajoutez la
+  playlist, laissez-la se charger. Sur ordinateur, un lecteur multimédia classique sait ouvrir un fichier M3U
+  directement via <i>Média → Ouvrir un flux réseau</i>, ce qui est pratique pour vérifier rapidement qu'une playlist
+  fonctionne avant de l'installer sur le téléviseur.</p>
+<p>C'est d'ailleurs notre astuce préférée en cas de doute : testez toujours sur ordinateur d'abord. Si la playlist
+  fonctionne là et pas sur la télé, le problème vient de l'application ou du réseau, pas de la playlist.</p>
+
+<h2 id="vf">Mettre un film en français : pistes audio et sous-titres</h2>
+<p>La question la plus fréquente après l'installation. Pendant la lecture, ouvrez le menu du lecteur — un appui sur
+  la touche centrale ou un balayage vers le haut selon l'application — puis cherchez <b>Audio</b>, <b>Pistes</b> ou
+  une icône de haut-parleur. Sélectionnez la piste française. Le menu voisin, <b>Sous-titres</b>, fonctionne de la
+  même façon.</p>
+<p>La plupart des lecteurs mémorisent ce choix et appliquent la même préférence aux lectures suivantes. Si les
+  contenus sont classés par catégories, une rubrique <b>VF</b> ou <b>Films français</b> regroupe généralement les
+  versions françaises, ce qui évite d'avoir à changer la piste à chaque fois.</p>
+
+<h2 id="depannage">Quand ça ne marche pas</h2>
+<ul>
+  <li><b>Rien ne se charge</b> : l'URL comporte presque toujours une faute de frappe. Copiez-collez-la à nouveau.</li>
+  <li><b>La liste se charge mais aucune chaîne ne démarre</b> : vérifiez que vous ne dépassez pas le nombre de
+    connexions simultanées de votre offre. Un flux resté ouvert sur un autre appareil compte.</li>
+  <li><b>L'image saccade</b> : testez sur un autre appareil et, si possible, en Ethernet. Cela distingue un problème
+    de réseau d'un problème de source.</li>
+  <li><b>Le guide des programmes est vide</b> : l'EPG n'a pas été renseigné, ou met simplement quelques minutes à se
+    charger la première fois.</li>
+</ul>
+<p>Et si rien de tout cela ne suffit, adressez-vous au support de votre fournisseur en lui donnant trois
+  informations : votre appareil, l'application utilisée, et ce qui s'affiche exactement à l'écran. Avec ces
+  éléments, le diagnostic prend en général deux minutes ; sans eux, l'échange s'éternise.</p>
+
+    </div>
+    <div class="next">
+      <b>À lire ensuite</b>
+      <ul>
+      <li><a href="/film-francais-iptv/">Comment mettre un film en français sur l'IPTV</a></li>
+      <li><a href="/box-iptv-appareils/">Box IPTV, boîtier ou clé HDMI : que choisir ?</a></li>
+      <li><a href="/comment-fonctionne-iptv/">Comment fonctionne l'IPTV en France ?</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+<footer class="ftr">
+  <div class="wrap">
+    <div class="ftr__nav">
+      <a href="/">Accueil</a>
+      <a href="/comment-fonctionne-iptv/">Comment fonctionne l'IPTV</a>
+      <a href="/choisir-abonnement-iptv/">Bien choisir</a>
+      <a href="/box-iptv-appareils/">Appareils</a>
+      <a href="/installer-playlist-m3u/">Installation</a>
+      <a href="/film-francais-iptv/">Piste audio française</a>
+      <a href="/iptv-legal-france/">Cadre légal</a>
+    </div>
+    <p class="note">Guide IPTV est un site d'information indépendant. Nous ne vendons aucun abonnement et ne
+      distribuons aucun contenu. Les explications publiées ici portent sur le fonctionnement de la technologie IPTV
+      et sur le cadre légal français ; il appartient à chacun de n'accéder qu'aux contenus qu'il est légalement
+      autorisé à regarder. Les marques citées appartiennent à leurs propriétaires respectifs et sont mentionnées à
+      titre de compatibilité technique.</p>
+    <div class="bot">&copy; <span id="yr">2026</span> Guide IPTV</div>
+  </div>
+</footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>

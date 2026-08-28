@@ -1,25 +1,6 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "cleanUrls": true,
-  "trailingSlash": false,
-  "redirects": [
-    {
-      "source": "/index.html",
-      "destination": "/",
-      "permanent": true
-    },
-    {
-      "source": "/:path*",
-      "has": [
-        {
-          "type": "host",
-          "value": "www.france-iptv.website"
-        }
-      ],
-      "destination": "https://france-iptv.website/:path*",
-      "permanent": true
-    }
-  ],
+  "trailingSlash": true,
   "headers": [
     {
       "source": "/(.*)",
@@ -47,24 +28,6 @@
         {
           "key": "Cache-Control",
           "value": "public, max-age=0, s-maxage=3600, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/sitemap.xml",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=3600"
         }
       ]
     }

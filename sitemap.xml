@@ -1,48 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://france-iptv.website/</loc>
+    <loc>https://guide-iptv.fr/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://france-iptv.website/blog</loc>
-    <changefreq>weekly</changefreq>
+    <loc>https://guide-iptv.fr/comment-fonctionne-iptv/</loc>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://france-iptv.website/blog-abonnement-iptv-france</loc>
+    <loc>https://guide-iptv.fr/choisir-abonnement-iptv/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://france-iptv.website/blog-meilleur-iptv-france</loc>
+    <loc>https://guide-iptv.fr/box-iptv-appareils/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://france-iptv.website/blog-iptv-legal-france</loc>
+    <loc>https://guide-iptv.fr/installer-playlist-m3u/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://france-iptv.website/blog-installer-playlist-m3u</loc>
+    <loc>https://guide-iptv.fr/film-francais-iptv/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://france-iptv.website/blog-film-francais-iptv</loc>
+    <loc>https://guide-iptv.fr/iptv-legal-france/</loc>
     <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://france-iptv.website/blog-comment-fonctionne-iptv</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://france-iptv.website/blog-box-iptv-france</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
 </urlset>

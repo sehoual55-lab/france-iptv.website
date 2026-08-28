@@ -1,0 +1,230 @@
+[
+ {
+  "slug": "comment-fonctionne-iptv",
+  "title": "Comment fonctionne l'IPTV en France ?",
+  "short": "Comment fonctionne l'IPTV en France ?",
+  "desc": "Le trajet du flux, la playlist M3U, l'EPG, le débit nécessaire et la différence avec une box opérateur ou Netflix. L'IPTV expliquée simplement.",
+  "eyebrow": "Comprendre",
+  "lead": "Derrière un mot un peu technique se cache un mécanisme simple, que vous utilisez sans doute déjà tous les jours sans le savoir.",
+  "read": "7 min de lecture",
+  "toc": [
+   [
+    "Ce que veut dire IPTV",
+    "#definition"
+   ],
+   [
+    "Le trajet d'un flux, de bout en bout",
+    "#trajet"
+   ],
+   [
+    "Playlist M3U ou identifiants Xtream",
+    "#playlist"
+   ],
+   [
+    "L'EPG, ce guide des programmes",
+    "#epg"
+   ],
+   [
+    "Quel débit faut-il vraiment",
+    "#debit"
+   ],
+   [
+    "Box opérateur, Netflix, IPTV : les différences",
+    "#differences"
+   ],
+   [
+    "Pourquoi l'image saccade parfois",
+    "#saccade"
+   ]
+  ],
+  "body": "\n<h2 id=\"definition\">Ce que veut dire IPTV</h2>\n<p>IPTV est l'abréviation d'<i>Internet Protocol Television</i> : la télévision acheminée par le même protocole\n  réseau que vos pages web et vos e-mails, au lieu d'une antenne, d'un câble coaxial ou d'une parabole.</p>\n<p>Ce n'est pas une nouveauté ni une technologie parallèle. Si vous êtes chez Orange, Free, SFR ou Bouygues et que\n  vous regardez la télévision par la box, vous faites déjà de l'IPTV. La différence entre ces services et un\n  abonnement indépendant ne tient pas à la technologie employée, mais au fournisseur du flux et au catalogue\n  proposé.</p>\n\n<h2 id=\"trajet\">Le trajet d'un flux, de bout en bout</h2>\n<p>Une chaîne parcourt quatre étapes avant d'arriver sur votre écran :</p>\n<ul>\n  <li><b>La source.</b> Le signal d'origine de la chaîne, dans sa résolution native.</li>\n  <li><b>L'encodage.</b> Le signal est compressé en plusieurs qualités — c'est ce qui permet de le transporter sans\n    saturer les réseaux.</li>\n  <li><b>Le serveur de diffusion.</b> Il met ces flux à disposition et gère les accès. C'est la seule étape que le\n    fournisseur d'abonnement maîtrise réellement, et donc celle qui distingue un service stable d'un service qui\n    coupe.</li>\n  <li><b>Votre lecteur.</b> L'application sur votre téléviseur, votre box ou votre téléphone, qui réclame le flux et\n    le décode à l'écran.</li>\n</ul>\n<p>Cette chaîne explique pourquoi la qualité d'image n'est jamais entièrement entre les mains du fournisseur : si la\n  source diffuse en 720p, aucun serveur au monde n'en fera de la 4K.</p>\n\n<h2 id=\"playlist\">Playlist M3U ou identifiants Xtream</h2>\n<p>Pour que votre lecteur sache où chercher, il lui faut une clé d'accès. Elle prend deux formes.</p>\n<p><b>La playlist M3U</b> est un simple fichier texte contenant la liste des chaînes et l'adresse de chaque flux.\n  Vous recevez une URL longue, vous la collez dans votre application, et la liste se remplit. C'est universel :\n  pratiquement tous les lecteurs la comprennent, y compris VLC.</p>\n<p><b>Les identifiants Xtream</b> (une adresse de serveur, un nom d'utilisateur, un mot de passe) font la même chose\n  autrement. L'avantage : l'application peut organiser le contenu en catégories, afficher les affiches de films et\n  gérer la reprise de lecture, ce qu'une simple liste M3U ne permet pas.</p>\n<p>Si votre application propose les deux, prenez Xtream — l'interface est nettement plus agréable. La procédure\n  détaillée figure dans notre <a href=\"/installer-playlist-m3u/\">guide d'installation</a>.</p>\n\n<h2 id=\"epg\">L'EPG, ce guide des programmes</h2>\n<p>L'EPG (<i>Electronic Program Guide</i>) est le fichier qui alimente la grille des programmes : ce qui passe\n  maintenant, ce qui suit, et souvent les jours à venir. Il est transmis séparément des flux vidéo.</p>\n<p>D'où deux conséquences que beaucoup découvrent en s'énervant : un EPG vide ne signifie pas que votre abonnement\n  ne fonctionne pas, et il met parfois plusieurs minutes à se charger à la première ouverture. Laissez tourner avant\n  de conclure à un problème.</p>\n\n<h2 id=\"debit\">Quel débit faut-il vraiment</h2>\n<p>Les ordres de grandeur utiles, par flux simultané :</p>\n<ul>\n  <li><b>SD</b> : 3 à 5 Mb/s</li>\n  <li><b>HD / Full HD</b> : 8 à 15 Mb/s</li>\n  <li><b>4K</b> : 25 à 30 Mb/s</li>\n</ul>\n<p>Ces chiffres s'additionnent : deux écrans en Full HD réclament le double. Mais le chiffre annoncé par votre\n  opérateur n'est pas le bon indicateur. Ce qui compte, c'est la <b>régularité</b> du débit. Une fibre à 1 Gb/s qui\n  s'effondre trois secondes toutes les dix minutes donnera une expérience bien pire qu'un ADSL stable à 20 Mb/s,\n  parce que la vidéo en direct n'a pas de marge : contrairement à un téléchargement, elle ne peut pas rattraper le\n  retard.</p>\n\n<h2 id=\"differences\">Box opérateur, Netflix, IPTV : les différences</h2>\n<p>Les trois utilisent internet pour transporter de la vidéo, mais ne fonctionnent pas de la même manière.</p>\n<p><b>La box de votre opérateur</b> diffuse sur son propre réseau, séparé de votre trafic internet ordinaire. C'est\n  pourquoi la qualité y est très stable : le flux ne se bat pas contre vos téléchargements pour passer.</p>\n<p><b>Netflix, Prime Video, Disney+</b> sont des services de vidéo à la demande. Vous choisissez un titre, il se\n  lance. Il n'y a pas de notion de direct ni de grille de programmes.</p>\n<p><b>Un abonnement IPTV indépendant</b> transite par votre connexion internet classique et propose du direct\n  organisé en chaînes, généralement complété d'une section à la demande. C'est ce mélange direct plus catalogue qui\n  fait sa particularité — et le fait qu'il passe par votre connexion ordinaire explique qu'il soit plus sensible aux\n  conditions de réseau que la box de votre opérateur.</p>\n\n<h2 id=\"saccade\">Pourquoi l'image saccade parfois</h2>\n<p>Quand une chaîne se met à bégayer, la cause se trouve à l'un des quatre étages du trajet décrit plus haut. Pour\n  l'identifier sans tâtonner, procédez par élimination :</p>\n<ul>\n  <li><b>Une seule chaîne saccade, les autres non</b> : le problème vient de la source ou de ce flux précis. Rien à\n    régler chez vous.</li>\n  <li><b>Toutes les chaînes saccadent, sur tous les appareils</b> : c'est votre connexion ou le serveur. Testez un\n    autre service vidéo pour trancher.</li>\n  <li><b>Un seul appareil est concerné</b> : le Wi-Fi de cet appareil, ou sa puissance de décodage. Un câble\n    Ethernet règle la question en une minute.</li>\n  <li><b>Uniquement le soir</b> : saturation, chez votre opérateur ou côté serveur. C'est le test qu'il faut faire\n    avant de s'engager sur une longue durée.</li>\n</ul>\n<p>Pour le reste — quels appareils conviennent, comment installer une playlist, ce que dit la loi — les\n  autres guides de ce site prennent le relais.</p>\n"
+ },
+ {
+  "slug": "choisir-abonnement-iptv",
+  "title": "Quel est le meilleur IPTV en France ? Les critères qui comptent vraiment",
+  "short": "Quel est le meilleur IPTV en France ?",
+  "desc": "Comment choisir un abonnement IPTV en France sans se fier aux promesses invérifiables : compatibilité, connexions simultanées et qualité de l'assistance.",
+  "eyebrow": "Bien choisir",
+  "lead": "Les comparatifs d'IPTV en France se ressemblent tous : des nombres de chaînes énormes et des taux de disponibilité que personne ne peut vérifier. Voici une autre méthode.",
+  "read": "7 min de lecture",
+  "toc": [
+   [
+    "Pourquoi les classements ne servent à rien",
+    "#classements"
+   ],
+   [
+    "Critère 1 : la compatibilité de vos appareils",
+    "#compat"
+   ],
+   [
+    "Critère 2 : les connexions simultanées",
+    "#connexions"
+   ],
+   [
+    "Critère 3 : parler à quelqu'un avant de payer",
+    "#humain"
+   ],
+   [
+    "Les signaux qui doivent vous alerter",
+    "#alertes"
+   ],
+   [
+    "La réponse honnête",
+    "#reponse"
+   ]
+  ],
+  "body": "\n<h2 id=\"classements\">Pourquoi les classements se ressemblent tous</h2>\n<p>Tapez « <b>quel est le meilleur IPTV en France</b> » et vous tomberez sur des dizaines de pages qui comparent\n  essentiellement des tailles de catalogue. C'est une information utile, mais c'est la plus facile à afficher et la\n  moins facile à vérifier — et surtout, ce n'est pas elle qui décide de votre expérience une fois l'abonnement\n  activé.</p>\n<p>Il existe trois critères que vous pouvez, eux, vérifier avant de payer un centime, et qui changent vraiment votre\n  quotidien. Commencez par ceux-là, le catalogue viendra ensuite.</p>\n\n<h2 id=\"compat\">Critère 1 : la compatibilité de vos appareils</h2>\n<p>Un abonnement IPTV n'est utile que s'il fonctionne sur ce que vous avez déjà chez vous. Posez-vous la question\n  appareil par appareil :</p>\n<ul>\n  <li><b>Smart TV Samsung (Tizen) ou LG (webOS)</b> : elles proposent des applications de lecture compatibles dans\n    leur magasin. Vérifiez que votre modèle, s'il a quelques années, y a toujours accès.</li>\n  <li><b>Android TV, Google TV, Philips, Sony, TCL</b> : le choix d'applications est le plus large, c'est le cas le\n    plus simple.</li>\n  <li><b>Fire TV Stick</b> : très populaire en France, fonctionne bien et coûte peu.</li>\n  <li><b>Téléviseur sans application adaptée</b> : une clé HDMI à une trentaine d'euros règle définitivement le\n    problème. Ne changez pas de téléviseur pour ça.</li>\n</ul>\n<p>Si un vendeur ne peut pas vous dire clairement ce qui fonctionne sur votre modèle précis, c'est déjà une\n  réponse.</p>\n\n<h2 id=\"connexions\">Critère 2 : les connexions simultanées</h2>\n<p>C'est le seul chiffre qui compte vraiment. Une <b>connexion</b> correspond à un flux lu au même instant. Avec une\n  seule connexion, vous pouvez installer votre playlist sur le téléviseur, la tablette et le téléphone — mais un seul\n  de ces appareils peut regarder à la fois.</p>\n<p>Comptez de façon réaliste : combien de personnes chez vous regardent la télévision <b>en même temps</b> un\n  dimanche soir ? Deux connexions suffisent à la plupart des foyers, trois à une famille avec adolescents. Payer pour\n  cinq quand vous vivez seul n'apporte rien.</p>\n\n<h2 id=\"humain\">Critère 3 : parler à quelqu'un avant de payer</h2>\n<p>Testez le service avant d'acheter, gratuitement : envoyez une question précise et un peu gênante. « Est-ce que ça\n  marche sur mon téléviseur Samsung de 2018 ? », « Que se passe-t-il si un flux ne fonctionne pas ? », « Est-ce que\n  la 4K est garantie ? ».</p>\n<p>Une réponse honnête ressemble à : <i>« La 4K dépend de la source, on ne peut pas la garantir sur tout. »</i> Une\n  réponse commerciale ressemble à : <i>« Oui tout est en 4K, achetez maintenant. »</i> La première vous dit la\n  vérité ; la seconde vous dit ce que vous voulez entendre.</p>\n\n<h2 id=\"alertes\">Les signaux qui doivent vous alerter</h2>\n<ul>\n  <li>Des taux de disponibilité chiffrés (« 99,99 % ») affichés comme une garantie.</li>\n  <li>Une insistance sur le paiement immédiat, avec un compte à rebours.</li>\n  <li>L'impossibilité d'obtenir une réponse claire sur ce que le service <b>ne</b> fait <b>pas</b>.</li>\n  <li>Un site qui vous demande vos coordonnées bancaires dans un formulaire non sécurisé.</li>\n</ul>\n\n<h2 id=\"reponse\">La réponse honnête</h2>\n<p>Il n'y a pas de « meilleur IPTV de France ». L'expression ne veut rien dire : elle suppose un classement\n  unique là où les besoins diffèrent d'un foyer à l'autre. Un service excellent pour quelqu'un qui regarde trois\n  chaînes sur une Android TV peut être inutilisable pour une famille de cinq personnes sur une Smart TV de\n  2017.</p>\n<p>Ce qu'on peut faire, en revanche, c'est décrire ce qu'un fournisseur sérieux est capable de vous dire avec\n  précision : quels appareils sont pris en charge, combien de connexions simultanées sont incluses, quel est le prix\n  total, et ce que le service <i>ne</i> fait <i>pas</i>. Un vendeur qui répond à ces quatre questions sans détour\n  vous en apprend plus que n'importe quel classement.</p>\n<p>Un dernier point, rarement écrit noir sur blanc : la qualité d'image et la stabilité d'un flux dépendent de la\n  source et de votre connexion, pas seulement du fournisseur. La 4K est possible quand le flux d'origine la permet —\n  comme sur n'importe quel service de streaming — et personne ne peut la garantir sur l'intégralité d'un catalogue.\n  Une offre qui le promet vous ment sur un point vérifiable, ce qui en dit long sur le reste.</p>\n"
+ },
+ {
+  "slug": "box-iptv-appareils",
+  "title": "Box IPTV, boîtier ou clé HDMI : que choisir ?",
+  "short": "Box IPTV, boîtier ou clé HDMI : que choisir ?",
+  "desc": "Smart TV, Fire TV Stick, boîtier dédié ou Android TV : ce qui fonctionne vraiment pour l'IPTV en France, à quel prix, et ce qu'il ne faut surtout pas acheter.",
+  "eyebrow": "Matériel",
+  "lead": "Avant d'acheter quoi que ce soit : dans la plupart des cas, l'appareil qu'il vous faut est déjà branché à votre téléviseur.",
+  "read": "7 min de lecture",
+  "toc": [
+   [
+    "Vous avez probablement déjà ce qu'il faut",
+    "#deja"
+   ],
+   [
+    "Smart TV Samsung et LG",
+    "#smarttv"
+   ],
+   [
+    "Android TV et Google TV",
+    "#androidtv"
+   ],
+   [
+    "La clé HDMI : le meilleur rapport qualité-prix",
+    "#cle"
+   ],
+   [
+    "Les boîtiers dédiés",
+    "#boitiers"
+   ],
+   [
+    "Téléphone, tablette, ordinateur",
+    "#mobile"
+   ],
+   [
+    "Ce qu'il ne faut pas acheter",
+    "#eviter"
+   ],
+   [
+    "Récapitulatif par budget",
+    "#recap"
+   ]
+  ],
+  "body": "\n<h2 id=\"deja\">Vous avez probablement déjà ce qu'il faut</h2>\n<p>La recherche « box IPTV » laisse croire qu'un appareil spécifique est nécessaire. C'est rarement vrai. Un\n  abonnement IPTV n'est qu'une playlist lue par une application : tout appareil capable d'installer une application\n  et de décoder de la vidéo fait l'affaire.</p>\n<p>Avant de dépenser quoi que ce soit, posez-vous la question dans cet ordre : mon téléviseur est-il connecté ?\n  Ai-je déjà une clé HDMI ou une console ? Si la réponse est oui, commencez par là — vous verrez ensuite si quelque\n  chose vous manque vraiment.</p>\n\n<h2 id=\"smarttv\">Smart TV Samsung et LG</h2>\n<p>Les téléviseurs Samsung tournent sous <b>Tizen</b>, les LG sous <b>webOS</b>. Les deux disposent d'applications de\n  lecture IPTV dans leur magasin, et l'installation ne demande aucun matériel supplémentaire.</p>\n<p>Deux réserves, qu'il vaut mieux connaître avant d'acheter un abonnement :</p>\n<ul>\n  <li><b>L'âge du téléviseur.</b> Passé cinq ou six ans, le magasin d'applications finit par ne plus être mis à\n    jour, et certaines applications deviennent indisponibles ou instables.</li>\n  <li><b>Le choix restreint.</b> Ces deux systèmes proposent nettement moins d'applications qu'Android. Si celle qui\n    vous convient n'y est pas, vous n'aurez pas d'alternative.</li>\n</ul>\n<p>Dans les deux cas, une clé HDMI à 40 € contourne le problème sans remplacer le téléviseur.</p>\n\n<h2 id=\"androidtv\">Android TV et Google TV</h2>\n<p>C'est le cas le plus confortable. Les téléviseurs Sony, Philips, TCL et une partie des Hisense embarquent Android\n  TV ou Google TV, ce qui donne accès à la totalité des lecteurs IPTV existants, y compris les plus aboutis.</p>\n<p>Si vous achetez un téléviseur prochainement et que l'IPTV compte pour vous, c'est le système que je regarderais\n  en priorité — non pour la qualité d'image, qui dépend de la dalle, mais pour ne jamais être bloqué côté\n  logiciel.</p>\n\n<h2 id=\"cle\">La clé HDMI : le meilleur rapport qualité-prix</h2>\n<p>Une clé HDMI se branche derrière le téléviseur et le transforme en appareil connecté, quel que soit son âge. Deux\n  familles :</p>\n<p><b>Le Fire TV Stick d'Amazon</b>, entre 35 et 70 € selon le modèle. Très répandu en France, simple à mettre en\n  route. Le modèle 4K se justifie si votre téléviseur est effectivement 4K ; sinon, la version standard suffit\n  amplement.</p>\n<p><b>Les clés Android TV</b> (Chromecast avec Google TV et équivalents), dans la même gamme de prix, avec l'accès\n  complet au magasin Google.</p>\n<p>C'est le conseil que je donne le plus souvent : pour le prix d'un mois et demi d'abonnement, une clé règle\n  définitivement toute question de compatibilité, et elle vous suivra sur votre prochain téléviseur.</p>\n\n<h2 id=\"boitiers\">Les boîtiers dédiés</h2>\n<p>Les boîtiers de type <b>MAG</b> ou <b>Formuler</b> sont conçus spécifiquement pour ce genre d'usage. Ils coûtent\n  généralement entre 80 et 150 €.</p>\n<p>Leur intérêt est réel mais précis : l'interface ne fait que ça, la télécommande est simple, et il n'y a pas de\n  système d'exploitation généraliste à naviguer. Pour un parent ou un grand-parent qui veut une expérience proche de\n  celle d'une box classique, c'est le meilleur choix — et souvent le seul qui évitera les appels au secours.</p>\n<p>Pour un utilisateur à l'aise avec un smartphone, en revanche, ils n'apportent pas grand-chose de plus qu'une clé\n  à moitié prix.</p>\n\n<h2 id=\"mobile\">Téléphone, tablette, ordinateur</h2>\n<p>Ces appareils fonctionnent parfaitement et ne coûtent rien de plus, mais ils répondent à un autre besoin :\n  regarder ailleurs que dans le salon, ou tester rapidement un abonnement avant de l'installer sur le\n  téléviseur.</p>\n<p>Sur ordinateur, VLC lit une playlist M3U sans rien installer d'autre. C'est la manière la plus rapide de vérifier\n  qu'un accès fonctionne — utile avant de passer une demi-heure sur la configuration du téléviseur.</p>\n\n<h2 id=\"eviter\">Ce qu'il ne faut pas acheter</h2>\n<ul>\n  <li><b>Un téléviseur neuf pour faire de l'IPTV.</b> Une clé à 40 € fait exactement le même travail. C'est cent\n    fois moins cher.</li>\n  <li><b>Un boîtier vendu « avec abonnement à vie inclus ».</b> Aucun service ne peut financer un accès illimité\n    avec un paiement unique. Ces offres disparaissent, et vous restez avec un boîtier verrouillé.</li>\n  <li><b>Un boîtier de marque inconnue à très bas prix.</b> Sans mises à jour, il devient inutilisable en un ou deux\n    ans, et les performances de décodage sont souvent insuffisantes pour de la Full HD fluide.</li>\n  <li><b>Un appareil acheté avant d'avoir testé.</b> Vérifiez d'abord sur ce que vous possédez déjà, ne serait-ce\n    que sur un téléphone.</li>\n</ul>\n\n<h2 id=\"recap\">Récapitulatif par budget</h2>\n<ul>\n  <li><b>0 €</b> — Smart TV récente, Android TV, ou simplement votre téléphone. Commencez toujours par là.</li>\n  <li><b>35 à 70 €</b> — clé HDMI. Le meilleur choix dans la grande majorité des situations.</li>\n  <li><b>80 à 150 €</b> — boîtier dédié. Justifié pour un utilisateur qui veut une interface simple et rien\n    d'autre.</li>\n</ul>\n<p>Une fois le matériel choisi, la mise en place prend quelques minutes :\n  <a href=\"/installer-playlist-m3u/\">notre guide d'installation</a> détaille la procédure appareil par\n  appareil.</p>\n"
+ },
+ {
+  "slug": "installer-playlist-m3u",
+  "title": "Installer une playlist M3U : le guide en français, appareil par appareil",
+  "short": "Installer une playlist M3U, appareil par appareil",
+  "desc": "Comment charger une playlist M3U dans un IPTV player en français sur Smart TV, Fire TV Stick, Android TV, mobile et ordinateur, et régler les pistes audio VF.",
+  "eyebrow": "Installation",
+  "lead": "Une playlist M3U, un lecteur compatible, et cinq minutes. Voici la marche à suivre sur chaque type d'appareil, avec les pièges qui font perdre du temps.",
+  "read": "8 min de lecture",
+  "toc": [
+   [
+    "Ce qu'est une playlist M3U",
+    "#m3u"
+   ],
+   [
+    "Ce que vous devez avoir sous la main",
+    "#prerequis"
+   ],
+   [
+    "Smart TV Samsung et LG",
+    "#smarttv"
+   ],
+   [
+    "Fire TV Stick et Android TV",
+    "#firetv"
+   ],
+   [
+    "Mobile, tablette et ordinateur",
+    "#mobile"
+   ],
+   [
+    "Mettre un film en français : pistes audio et sous-titres",
+    "#vf"
+   ],
+   [
+    "Quand ça ne marche pas",
+    "#depannage"
+   ]
+  ],
+  "body": "\n<h2 id=\"m3u\">Ce qu'est une playlist M3U</h2>\n<p>Un fichier <b>M3U</b> est un simple fichier texte qui liste des adresses de flux, avec pour chacune un nom et,\n  souvent, un logo et une catégorie. Ce n'est pas une vidéo : c'est un annuaire. Votre lecteur le lit, affiche la\n  liste des chaînes, et va chercher le flux correspondant quand vous en sélectionnez une.</p>\n<p>À côté du M3U, vous entendrez parler d'<b>EPG</b> (<i>Electronic Program Guide</i>), un second fichier qui remplit\n  la grille horaire : ce qui passe maintenant, ce qui passe ensuite. Les deux se configurent au même endroit dans la\n  plupart des applications.</p>\n\n<h2 id=\"prerequis\">Ce que vous devez avoir sous la main</h2>\n<ul>\n  <li>Vos <b>identifiants de playlist</b> (une URL, ou un identifiant et un mot de passe selon le lecteur).</li>\n  <li>Une <b>application de lecture compatible</b> installée sur l'appareil.</li>\n  <li>Une connexion internet correcte : environ 15 Mb/s pour du HD confortable, davantage pour de la 4K.</li>\n  <li>Cinq minutes de calme. La première installation est la seule qui prend du temps.</li>\n</ul>\n<p>Un conseil qui évite beaucoup d'erreurs : ne retapez jamais l'URL à la main sur un téléviseur. Copiez-collez-la,\n  ou utilisez la fonction de saisie depuis le téléphone si votre application la propose. Une seule lettre de travers\n  et rien ne se charge.</p>\n\n<h2 id=\"smarttv\">Smart TV Samsung et LG</h2>\n<p>Sur les téléviseurs Samsung (Tizen) et LG (webOS), la marche à suivre est la même dans les grandes lignes :</p>\n<ol>\n  <li>Ouvrez le magasin d'applications du téléviseur et installez une application de lecture IPTV compatible.</li>\n  <li>Lancez-la : elle affiche en général un <b>identifiant d'appareil</b> ou une adresse MAC.</li>\n  <li>Renseignez votre playlist là où l'application le demande — soit directement sur le téléviseur, soit via son\n    portail web depuis un ordinateur.</li>\n  <li>Redémarrez l'application. La liste des chaînes se charge.</li>\n</ol>\n<p>Si votre modèle est ancien et que son magasin ne propose plus d'application adaptée, ne cherchez pas midi à\n  quatorze heures : une clé HDMI règle le problème pour une trentaine d'euros.</p>\n\n<h2 id=\"firetv\">Fire TV Stick et Android TV</h2>\n<p>C'est le cas le plus simple, parce que le choix de lecteurs y est le plus large.</p>\n<ol>\n  <li>Installez une application de lecture IPTV depuis le magasin de l'appareil.</li>\n  <li>Ouvrez-la et choisissez d'ajouter une playlist — selon le lecteur, l'option s'appelle <i>Add playlist</i>,\n    <i>Ajouter une liste</i> ou <i>Xtream Codes</i>.</li>\n  <li>Collez l'URL M3U, ou saisissez l'identifiant et le mot de passe fournis.</li>\n  <li>Ajoutez l'EPG si un champ séparé le demande, puis validez.</li>\n</ol>\n<p>Sur Fire TV Stick, pensez à laisser la clé branchée sur un port assez alimenté et, si l'image saccade, testez le\n  Wi-Fi 5 GHz plutôt que le 2,4 GHz : c'est la cause d'un problème de fluidité sur deux.</p>\n\n<h2 id=\"mobile\">Mobile, tablette et ordinateur</h2>\n<p>Sur Android et iOS, les étapes sont identiques à celles d'Android TV : installez un lecteur compatible, ajoutez la\n  playlist, laissez-la se charger. Sur ordinateur, un lecteur multimédia classique sait ouvrir un fichier M3U\n  directement via <i>Média → Ouvrir un flux réseau</i>, ce qui est pratique pour vérifier rapidement qu'une playlist\n  fonctionne avant de l'installer sur le téléviseur.</p>\n<p>C'est d'ailleurs notre astuce préférée en cas de doute : testez toujours sur ordinateur d'abord. Si la playlist\n  fonctionne là et pas sur la télé, le problème vient de l'application ou du réseau, pas de la playlist.</p>\n\n<h2 id=\"vf\">Mettre un film en français : pistes audio et sous-titres</h2>\n<p>La question la plus fréquente après l'installation. Pendant la lecture, ouvrez le menu du lecteur — un appui sur\n  la touche centrale ou un balayage vers le haut selon l'application — puis cherchez <b>Audio</b>, <b>Pistes</b> ou\n  une icône de haut-parleur. Sélectionnez la piste française. Le menu voisin, <b>Sous-titres</b>, fonctionne de la\n  même façon.</p>\n<p>La plupart des lecteurs mémorisent ce choix et appliquent la même préférence aux lectures suivantes. Si les\n  contenus sont classés par catégories, une rubrique <b>VF</b> ou <b>Films français</b> regroupe généralement les\n  versions françaises, ce qui évite d'avoir à changer la piste à chaque fois.</p>\n\n<h2 id=\"depannage\">Quand ça ne marche pas</h2>\n<ul>\n  <li><b>Rien ne se charge</b> : l'URL comporte presque toujours une faute de frappe. Copiez-collez-la à nouveau.</li>\n  <li><b>La liste se charge mais aucune chaîne ne démarre</b> : vérifiez que vous ne dépassez pas le nombre de\n    connexions simultanées de votre offre. Un flux resté ouvert sur un autre appareil compte.</li>\n  <li><b>L'image saccade</b> : testez sur un autre appareil et, si possible, en Ethernet. Cela distingue un problème\n    de réseau d'un problème de source.</li>\n  <li><b>Le guide des programmes est vide</b> : l'EPG n'a pas été renseigné, ou met simplement quelques minutes à se\n    charger la première fois.</li>\n</ul>\n<p>Et si rien de tout cela ne suffit, adressez-vous au support de votre fournisseur en lui donnant trois\n  informations : votre appareil, l'application utilisée, et ce qui s'affiche exactement à l'écran. Avec ces\n  éléments, le diagnostic prend en général deux minutes ; sans eux, l'échange s'éternise.</p>\n"
+ },
+ {
+  "slug": "film-francais-iptv",
+  "title": "Comment mettre un film en français sur l'IPTV",
+  "short": "Comment mettre un film en français sur l'IPTV",
+  "desc": "Votre film démarre en anglais ? Comment changer la piste audio et activer les sous-titres français, application par application, et que faire sans VF.",
+  "eyebrow": "Prise en main",
+  "lead": "Le film se lance, et c'est de l'anglais. Rien n'est cassé : la piste française existe presque toujours, elle n'est simplement pas sélectionnée par défaut.",
+  "read": "5 min de lecture",
+  "toc": [
+   [
+    "Pourquoi le film démarre en anglais",
+    "#pourquoi"
+   ],
+   [
+    "Changer la piste audio, application par application",
+    "#pistes"
+   ],
+   [
+    "Activer les sous-titres français",
+    "#soustitres"
+   ],
+   [
+    "VF, VOSTFR, MULTI : décoder les mentions",
+    "#mentions"
+   ],
+   [
+    "Quand la piste française n'existe pas",
+    "#absente"
+   ],
+   [
+    "Régler le problème une fois pour toutes",
+    "#defaut"
+   ]
+  ],
+  "body": "\n<h2 id=\"pourquoi\">Pourquoi le film démarre en anglais</h2>\n<p>Un fichier vidéo peut contenir plusieurs pistes audio dans le même conteneur : une version originale, une version\n  française, parfois une espagnole ou une arabe. Quand vous lancez la lecture, votre application en choisit une —\n  et sauf réglage contraire, elle prend la première de la liste, qui est presque toujours la version originale.</p>\n<p>Autrement dit, ce n'est ni un défaut du fichier ni un problème de votre abonnement. C'est un réglage de lecture,\n  et il se change en trois secondes une fois qu'on sait où regarder.</p>\n\n<h2 id=\"pistes\">Changer la piste audio, application par application</h2>\n<p>Le principe est identique partout : ouvrir le menu pendant la lecture, trouver l'entrée audio, choisir la piste\n  marquée FR. Seul le chemin change.</p>\n<p><b>IPTV Smarters / Smarters Pro.</b> Pendant la lecture, appuyez sur <b>OK</b> pour afficher la barre de contrôle,\n  puis sélectionnez l'icône en forme de bulle ou l'entrée <b>Audio</b> à droite. La liste des pistes s'affiche avec\n  leurs codes de langue.</p>\n<p><b>TiviMate.</b> Appui long sur <b>OK</b>, puis <b>Pistes audio</b> dans le menu latéral. TiviMate mémorise votre\n  choix par chaîne, ce qui est pratique.</p>\n<p><b>Smart IPTV (SIPTV).</b> Touche <b>Menu</b> de la télécommande pendant la lecture, puis <b>Audio</b>. Sur\n  certaines Smart TV Samsung, c'est la touche <b>Tools</b> ou <b>Options</b> qui ouvre ce menu.</p>\n<p><b>VLC (ordinateur, Android, iOS).</b> Sur ordinateur : menu <b>Audio</b> puis <b>Piste audio</b>, ou le raccourci\n  clavier <b>B</b> qui fait défiler les pistes. Sur mobile : touchez l'écran, puis l'icône en forme de cône ou de\n  haut-parleur.</p>\n<p><b>Fire TV Stick.</b> Le geste dépend de l'application installée dessus, pas de la clé elle-même. Reportez-vous à\n  la ligne correspondante ci-dessus.</p>\n<p>Si vous ne trouvez pas le menu, cherchez une icône de dialogue, de haut-parleur, ou les lettres <b>CC</b> ou\n  <b>AUDIO</b> dans la barre qui apparaît quand vous appuyez sur OK.</p>\n\n<h2 id=\"soustitres\">Activer les sous-titres français</h2>\n<p>Le chemin est le même, une entrée plus bas : cherchez <b>Sous-titres</b>, <b>Subtitles</b> ou <b>CC</b> dans le\n  même menu, puis sélectionnez la ligne <b>French</b> ou <b>fre</b>.</p>\n<p>Deux cas à distinguer, parce qu'ils ne se règlent pas pareil. Les <b>sous-titres intégrés</b> apparaissent dans\n  cette liste et se désactivent normalement. Les <b>sous-titres incrustés</b>, eux, font partie de l'image : ils sont\n  gravés dans la vidéo et aucun réglage ne les enlèvera. Si vos sous-titres refusent de disparaître, c'est qu'ils\n  sont incrustés — il faut chercher une autre version du film.</p>\n\n<h2 id=\"mentions\">VF, VOSTFR, MULTI : décoder les mentions</h2>\n<p>Les catalogues VOD un peu sérieux indiquent la langue dès le titre. Savoir lire ces abréviations vous évite\n  d'ouvrir dix fichiers pour rien :</p>\n<ul>\n  <li><b>VF</b> — version française. Doublage en français, c'est ce que vous cherchez la plupart du temps.</li>\n  <li><b>VFF</b> — version française de France, par opposition à un doublage québécois.</li>\n  <li><b>VFQ</b> — version française québécoise. Même langue, autres comédiens et autres expressions.</li>\n  <li><b>VOSTFR</b> — version originale, sous-titrée en français. L'audio reste en anglais.</li>\n  <li><b>VO</b> — version originale sans sous-titres.</li>\n  <li><b>MULTI</b> — plusieurs pistes audio dans le fichier, dont normalement le français.</li>\n  <li><b>TRUEFRENCH</b> — utilisé comme synonyme de VFF dans la plupart des catalogues.</li>\n</ul>\n<p>Un fichier marqué <b>MULTI</b> est celui qui vous laisse le plus de latitude : c'est là que le changement de\n  piste audio prend tout son sens.</p>\n\n<h2 id=\"absente\">Quand la piste française n'existe pas</h2>\n<p>Il arrive que le menu audio ne propose qu'une seule ligne. Dans ce cas, aucun réglage ne fera apparaître une VF :\n  elle n'est pas dans le fichier. Trois options :</p>\n<ul>\n  <li>Cherchez le même titre dans le catalogue avec la mention <b>VF</b> ou <b>MULTI</b> — les deux versions\n    coexistent souvent.</li>\n  <li>Rabattez-vous sur les sous-titres français si la piste de sous-titres, elle, est présente.</li>\n  <li>Pour un film très récent, la VF n'existe parfois pas encore du tout, y compris ailleurs. Il faut attendre la\n    sortie du doublage.</li>\n</ul>\n\n<h2 id=\"defaut\">Régler le problème une fois pour toutes</h2>\n<p>Plutôt que de refaire la manipulation à chaque film, la plupart des applications acceptent une langue audio par\n  défaut. Cherchez dans les réglages généraux une entrée du type <b>Langue audio préférée</b> ou <b>Preferred audio\n  language</b>, et mettez-la sur <b>Français</b>. L'application choisira alors automatiquement la piste FR quand\n  elle existe, et retombera sur la VO seulement quand il n'y a pas d'alternative.</p>\n<p>C'est le réglage que je vous conseille de faire dès l'installation. Pour le reste de la mise en place, notre\n  <a href=\"/installer-playlist-m3u/\">guide d'installation d'une playlist M3U</a> reprend chaque\n  appareil.</p>\n"
+ },
+ {
+  "slug": "iptv-legal-france",
+  "title": "Est-ce que l'IPTV est légal en France ? Ce que dit vraiment la loi",
+  "short": "Est-ce que l'IPTV est légal en France ?",
+  "desc": "La technologie IPTV est légale en France. Ce qui compte, ce sont les droits sur les contenus diffusés. Explication claire, sans langue de bois.",
+  "eyebrow": "Cadre légal",
+  "lead": "La question revient constamment, et les réponses trouvées en ligne sont souvent soit alarmistes, soit trop rassurantes. Voici la distinction qui compte.",
+  "read": "6 min de lecture",
+  "toc": [
+   [
+    "La technologie n'est pas en cause",
+    "#techno"
+   ],
+   [
+    "Ce qui fait la différence : les droits",
+    "#droits"
+   ],
+   [
+    "Ce que dit le cadre français",
+    "#cadre"
+   ],
+   [
+    "Ce que vous risquez concrètement",
+    "#risques"
+   ],
+   [
+    "Ce qu'il faut retenir",
+    "#position"
+   ]
+  ],
+  "body": "\n<h2 id=\"techno\">La technologie n'est pas en cause</h2>\n<p>Commençons par le point le plus simple : <b>l'IPTV en tant que technologie est parfaitement légale en France</b>.\n  C'est même la norme. Les box internet des opérateurs français diffusent la télévision par protocole IP depuis des\n  années. Molotov, les services de replay, les plateformes de streaming : tous reposent sur le même principe\n  technique que celui décrit sur ce site.</p>\n<p>Poser la question « est-ce que l'IPTV est légal » revient donc à demander si le courriel est légal. La réponse\n  dépend entièrement de ce que vous en faites.</p>\n\n<h2 id=\"droits\">Ce qui fait la différence : les droits</h2>\n<p>Ce qui détermine la légalité d'un flux, ce n'est pas le tuyau, c'est le <b>contenu</b> qui y circule et les droits\n  qui s'y rattachent. Une chaîne dispose de droits de diffusion pour un territoire et une durée donnés ; un\n  distributeur doit être autorisé à la retransmettre.</p>\n<p>Autrement dit : regarder une chaîne à laquelle vous avez légitimement accès est licite ; accéder à des contenus\n  protégés sans que les droits nécessaires aient été acquis ne l'est pas — quelle que soit la technologie\n  employée.</p>\n\n<h2 id=\"cadre\">Ce que dit le cadre français</h2>\n<p>En France, la protection des œuvres relève du Code de la propriété intellectuelle, et la lutte contre la\n  retransmission non autorisée — en particulier des compétitions sportives — s'est nettement renforcée ces dernières\n  années. L'<b>Arcom</b>, née de la fusion du CSA et de la Hadopi, dispose de moyens pour faire bloquer des services\n  diffusant illicitement des contenus protégés, et les ayants droit obtiennent régulièrement des décisions de\n  blocage auprès des juridictions.</p>\n<p>Ce cadre vise avant tout les services qui diffusent sans droits, et les personnes qui les exploitent. Il ne rend\n  pas illégale la technologie, ni le fait de posséder une application de lecture ou un fichier M3U.</p>\n\n<h2 id=\"risques\">Ce que vous risquez concrètement</h2>\n<p>Nous ne sommes pas avocats et cet article n'est pas un conseil juridique : pour votre situation personnelle,\n  adressez-vous à un professionnel du droit. Ce que l'on peut dire de général, c'est que les autorités et les ayants\n  droit concentrent leurs actions sur les diffuseurs et les revendeurs plutôt que sur les particuliers, et que le\n  risque le plus courant pour un abonné est plus prosaïque : un service bloqué du jour au lendemain, et un\n  abonnement payé qui ne fonctionne plus.</p>\n<p>C'est une raison de plus pour privilégier des durées que vous acceptez de perdre, et un interlocuteur qui répond\n  quand quelque chose cesse de marcher.</p>\n\n<h2 id=\"position\">Ce qu'il faut retenir</h2>\n<p>La distinction tient en une phrase : <b>la technologie est légale, les droits sur les contenus décident du\n  reste</b>. Un service qui diffuse des chaînes dont il détient les droits opère dans un cadre légal ; un service qui\n  retransmet des chaînes payantes sans ces droits, non — quelle que soit la manière dont il se présente.</p>\n<p>Il appartient donc à chacun de <b>n'accéder qu'aux contenus qu'il est légalement autorisé à regarder</b>, et de\n  poser la question des droits avant de souscrire où que ce soit. Un fournisseur sérieux y répond sans détour.</p>\n<p>Un dernier repère utile : si un site vous affirme qu'un abonnement vous ouvre un droit d'accès à tout, sans\n  nuance, l'affirmation est fausse. C'est un point vérifiable — et quelqu'un qui se trompe volontairement dessus se\n  trompera aussi sur ce qui est plus difficile à vérifier.</p>\n"
+ }
+]
