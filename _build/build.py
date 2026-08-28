@@ -7,6 +7,10 @@ PHONE = '16728962871'
 PHONE_V = '+1 672 896 2871'
 DOMAIN = 'https://france-iptv.website'
 
+def slug_url(slug):
+    """Filename on disk -> public URL path (Vercel cleanUrls strips .html)."""
+    return '/' if slug in ('', 'index.html') else '/' + slug[:-5]
+
 def wa(msg):
     return 'https://wa.me/%s?text=%s' % (PHONE, urllib.parse.quote(msg, safe=''))
 
@@ -90,14 +94,14 @@ def shell(title, desc, slug, inner, extra_head=''):
 <meta name="theme-color" content="#0A0A0C">
 <title>%(title)s | France IPTV</title>
 <meta name="description" content="%(desc)s">
-<link rel="canonical" href="%(domain)s/%(slug)s">
+<link rel="canonical" href="%(domain)s%(url)s">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="format-detection" content="telephone=no">
-<link rel="alternate" hreflang="fr" href="%(domain)s/%(slug)s">
+<link rel="alternate" hreflang="fr" href="%(domain)s%(url)s">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="France IPTV">
-<meta property="og:url" content="%(domain)s/%(slug)s">
+<meta property="og:url" content="%(domain)s%(url)s">
 <meta property="og:title" content="%(title)s">
 <meta property="og:description" content="%(desc)s">
 <meta property="og:image" content="%(domain)s/assets/og-image.webp">
@@ -146,35 +150,35 @@ def shell(title, desc, slug, inner, extra_head=''):
 %(icons)s
 <header class="hdr is-stuck" id="hdr">
   <div class="wrap hdr__in">
-    <a href="index.html" class="logo" aria-label="France IPTV, accueil">
+    <a href="/" class="logo" aria-label="France IPTV, accueil">
       <span class="logo__mark" aria-hidden="true"><svg><use href="#i-logomark"></use></svg></span>
       <span><b>FRANCE</b> <i>IPTV</i></span>
     </a>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="index.html#abonnement">Abonnement</a>
-      <a href="index.html#appareils">Appareils</a>
-      <a href="index.html#tarifs">Tarifs</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="blog.html" class="is-active">Blog</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="/">Accueil</a>
+      <a href="/#abonnement">Abonnement</a>
+      <a href="/#appareils">Appareils</a>
+      <a href="/#tarifs">Tarifs</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog" class="is-active">Blog</a>
+      <a href="/#contact">Contact</a>
     </nav>
     <div class="hdr__right">
       <a class="hdr__wa" href="{{WA_GENERIC}}" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
         <svg><use href="#i-wa"></use></svg><span>WhatsApp &bull; +1 672 896 2871</span></a>
-      <a class="btn btn-gold" href="index.html#tarifs">Commencer</a>
+      <a class="btn btn-gold" href="/#tarifs">Commencer</a>
       <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
     </div>
   </div>
 </header>
 <div class="mnav" id="mnav">
-  <a class="mnav__l" href="index.html">Accueil</a>
-  <a class="mnav__l" href="index.html#abonnement">Abonnement IPTV</a>
-  <a class="mnav__l" href="index.html#appareils">Appareils compatibles</a>
-  <a class="mnav__l" href="index.html#tarifs">Tarifs</a>
-  <a class="mnav__l" href="index.html#faq">FAQ</a>
-  <a class="mnav__l" href="blog.html">Blog</a>
-  <a class="mnav__l" href="index.html#contact">Contact</a>
+  <a class="mnav__l" href="/">Accueil</a>
+  <a class="mnav__l" href="/#abonnement">Abonnement IPTV</a>
+  <a class="mnav__l" href="/#appareils">Appareils compatibles</a>
+  <a class="mnav__l" href="/#tarifs">Tarifs</a>
+  <a class="mnav__l" href="/#faq">FAQ</a>
+  <a class="mnav__l" href="/blog">Blog</a>
+  <a class="mnav__l" href="/#contact">Contact</a>
   <a class="btn btn-wa btn-block btn-lg" href="{{WA_GENERIC}}" target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg> Nous écrire sur WhatsApp</a>
 </div>
 <main>
@@ -184,7 +188,7 @@ def shell(title, desc, slug, inner, extra_head=''):
   <div class="wrap">
     <div class="ftr__grid">
       <div class="ftr__about">
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
           <span class="logo__mark" aria-hidden="true"><svg><use href="#i-logomark"></use></svg></span>
           <span><b>FRANCE</b> <i>IPTV</i></span>
         </a>
@@ -193,26 +197,26 @@ def shell(title, desc, slug, inner, extra_head=''):
         <a class="ftr__wa" href="{{WA_GENERIC}}" target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg> +1 672 896 2871</a>
       </div>
       <div><h4>Navigation</h4><ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#abonnement">Abonnement IPTV</a></li>
-        <li><a href="index.html#appareils">Appareils</a></li>
-        <li><a href="index.html#tarifs">Tarifs</a></li>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/#abonnement">Abonnement IPTV</a></li>
+        <li><a href="/#appareils">Appareils</a></li>
+        <li><a href="/#tarifs">Tarifs</a></li>
       </ul></div>
       <div><h4>En savoir plus</h4><ul>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html#guide">Guide IPTV</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/#guide">Guide IPTV</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul></div>
       <div><h4>Assistance</h4><ul>
         <li><a href="{{WA_GENERIC}}" target="_blank" rel="noopener">Assistance WhatsApp</a></li>
-        <li><a href="blog-abonnement-iptv-france.html">Abonnement IPTV : le guide</a></li>
-        <li><a href="blog-comment-fonctionne-iptv.html">Comment fonctionne l'IPTV</a></li>
-        <li><a href="blog-box-iptv-france.html">Quel appareil choisir</a></li>
-        <li><a href="blog-installer-playlist-m3u.html">Installer une playlist M3U</a></li>
-        <li><a href="blog-film-francais-iptv.html">Mettre un film en français</a></li>
-        <li><a href="blog-meilleur-iptv-france.html">Quel IPTV choisir</a></li>
-        <li><a href="blog-iptv-legal-france.html">IPTV et légalité</a></li>
+        <li><a href="/blog-abonnement-iptv-france">Abonnement IPTV : le guide</a></li>
+        <li><a href="/blog-comment-fonctionne-iptv">Comment fonctionne l'IPTV</a></li>
+        <li><a href="/blog-box-iptv-france">Quel appareil choisir</a></li>
+        <li><a href="/blog-installer-playlist-m3u">Installer une playlist M3U</a></li>
+        <li><a href="/blog-film-francais-iptv">Mettre un film en français</a></li>
+        <li><a href="/blog-meilleur-iptv-france">Quel IPTV choisir</a></li>
+        <li><a href="/blog-iptv-legal-france">IPTV et légalité</a></li>
       </ul></div>
     </div>
     <p class="disclaimer">France IPTV fournit une prestation technique et une configuration de playlist ; le service
@@ -250,7 +254,7 @@ def shell(title, desc, slug, inner, extra_head=''):
 </script>
 </body>
 </html>
-""" % dict(title=title, desc=desc, slug=slug, inner=inner, css=css, js=js,
+""" % dict(title=title, desc=desc, slug=slug, url=slug_url(slug), inner=inner, css=css, js=js,
            icons=ICONS, domain=DOMAIN, extra_head=extra_head))
 
 # ---------------------------------------------------------------- articles
@@ -291,7 +295,7 @@ ARTICLES.append(dict(
   <li><b>L'application de lecture</b> installée sur votre téléviseur, votre box ou votre téléphone.</li>
 </ul>
 <p>Si vous voulez le détail du trajet d'un flux, le rôle de l'EPG et la différence avec une box opérateur, tout est
-  expliqué ici : <a href="blog-comment-fonctionne-iptv.html">comment fonctionne l'IPTV en France</a>.</p>
+  expliqué ici : <a href="/blog-comment-fonctionne-iptv">comment fonctionne l'IPTV en France</a>.</p>
 <p>Côté débit, comptez environ 15 Mb/s pour du Full HD confortable et 25 à 30 Mb/s si vous visez la 4K, surtout si
   plusieurs personnes regardent en même temps. Un point qu'on lit rarement : la <b>régularité</b> de votre connexion
   compte davantage que son débit maximal. Une fibre à 1 Gb/s qui décroche toutes les dix minutes donnera une moins
@@ -341,9 +345,9 @@ ARTICLES.append(dict(
 </ul>
 <p>Ne changez jamais de téléviseur pour de l'IPTV. Une clé HDMI coûte cent fois moins cher et fait exactement le même
   travail. Nous avons comparé les options et les prix dans
-  <a href="blog-box-iptv-france.html">box IPTV, boîtier ou clé HDMI : que choisir</a>, et la mise en place concrète
+  <a href="/blog-box-iptv-france">box IPTV, boîtier ou clé HDMI : que choisir</a>, et la mise en place concrète
   est détaillée appareil par appareil dans notre
-  <a href="blog-installer-playlist-m3u.html">guide d'installation d'une playlist M3U</a>.</p>
+  <a href="/blog-installer-playlist-m3u">guide d'installation d'une playlist M3U</a>.</p>
 
 <h2 id="vpn">Faut-il un VPN pour l'IPTV en France</h2>
 <p>La question revient souvent, et elle mélange en réalité deux sujets distincts qu'il vaut mieux séparer.</p>
@@ -363,7 +367,7 @@ ARTICLES.append(dict(
   réglage se trouve dans le menu du lecteur, sous <b>Piste audio</b> : sélectionnez la ligne marquée <b>FR</b>.</p>
 <p>La manipulation exacte varie selon l'application, et la plupart d'entre elles acceptent une langue par défaut qui
   vous évite de recommencer à chaque film. Nous avons détaillé chaque cas dans un guide dédié :
-  <a href="blog-film-francais-iptv.html">comment mettre un film en français sur l'IPTV</a>.</p>
+  <a href="/blog-film-francais-iptv">comment mettre un film en français sur l'IPTV</a>.</p>
 
 <h2 id="prix">Combien coûte un abonnement IPTV en France</h2>
 <p>Le marché français se situe globalement entre 4 € et 12 € par mois selon la durée d'engagement, avec des remises
@@ -384,11 +388,11 @@ ARTICLES.append(dict(
 <h2 id="suite">Pour aller plus loin</h2>
 <p>Trois sujets méritaient leur propre article plutôt qu'un paragraphe ici :</p>
 <ul>
-  <li><a href="blog-meilleur-iptv-france.html">Quel est le meilleur IPTV en France</a> — les critères vérifiables
+  <li><a href="/blog-meilleur-iptv-france">Quel est le meilleur IPTV en France</a> — les critères vérifiables
     avant de payer, et les signaux qui doivent vous alerter.</li>
-  <li><a href="blog-iptv-legal-france.html">Est-ce que l'IPTV est légal en France</a> — la distinction entre la
+  <li><a href="/blog-iptv-legal-france">Est-ce que l'IPTV est légal en France</a> — la distinction entre la
     technologie et les droits sur les contenus, expliquée sans langue de bois.</li>
-  <li><a href="blog-installer-playlist-m3u.html">Installer une playlist M3U</a> — la procédure appareil par
+  <li><a href="/blog-installer-playlist-m3u">Installer une playlist M3U</a> — la procédure appareil par
     appareil, et quoi faire quand ça ne marche pas.</li>
 </ul>
 <p>Et si vous préférez poser directement votre question plutôt que lire trois guides de plus : dites-nous quel
@@ -464,7 +468,7 @@ ARTICLES.append(dict(
   français, un prix total annoncé d'avance sans reconduction automatique, et une personne réelle au bout de
   WhatsApp, avant comme après l'achat.</p>
 <p>Si vous en êtes au tout début et que vous cherchez d'abord à comprendre ce que recouvre un abonnement, commencez
-  plutôt par notre <a href="blog-abonnement-iptv-france.html">guide de l'abonnement IPTV en France</a> : chaînes,
+  plutôt par notre <a href="/blog-abonnement-iptv-france">guide de l'abonnement IPTV en France</a> : chaînes,
   replay, appareils, prix, tout y est repris dans l'ordre.</p>
 <p>Un point que nous préférons écrire noir sur blanc plutôt que vous laisser le découvrir : la qualité d'image et la
   stabilité d'un flux donné dépendent de la source et de votre connexion. La 4K est possible quand le flux d'origine
@@ -616,7 +620,7 @@ ARTICLES.append(dict(
     charger la première fois.</li>
 </ul>
 <p>Pour le reste — choix de l'offre, chaînes, replay, connexions simultanées — reportez-vous au
-  <a href="blog-abonnement-iptv-france.html">guide de l'abonnement IPTV en France</a>.</p>
+  <a href="/blog-abonnement-iptv-france">guide de l'abonnement IPTV en France</a>.</p>
 <p>Et si rien de tout cela ne suffit : écrivez-nous sur WhatsApp en indiquant votre appareil, l'application utilisée
   et ce qui s'affiche exactement à l'écran. Avec ces trois informations, le dépannage prend en général deux
   minutes.</p>
@@ -701,8 +705,8 @@ ARTICLES.append(dict(
   language</b>, et mettez-la sur <b>Français</b>. L'application choisira alors automatiquement la piste FR quand
   elle existe, et retombera sur la VO seulement quand il n'y a pas d'alternative.</p>
 <p>C'est le réglage que je vous conseille de faire dès l'installation. Pour le reste de la mise en place, notre
-  <a href="blog-installer-playlist-m3u.html">guide d'installation d'une playlist M3U</a> reprend chaque appareil, et
-  le <a href="blog-abonnement-iptv-france.html">guide de l'abonnement IPTV en France</a> couvre le reste des
+  <a href="/blog-installer-playlist-m3u">guide d'installation d'une playlist M3U</a> reprend chaque appareil, et
+  le <a href="/blog-abonnement-iptv-france">guide de l'abonnement IPTV en France</a> couvre le reste des
   questions courantes.</p>
 """))
 
@@ -753,7 +757,7 @@ ARTICLES.append(dict(
   autrement. L'avantage : l'application peut organiser le contenu en catégories, afficher les affiches de films et
   gérer la reprise de lecture, ce qu'une simple liste M3U ne permet pas.</p>
 <p>Si votre application propose les deux, prenez Xtream — l'interface est nettement plus agréable. La procédure
-  détaillée figure dans notre <a href="blog-installer-playlist-m3u.html">guide d'installation</a>.</p>
+  détaillée figure dans notre <a href="/blog-installer-playlist-m3u">guide d'installation</a>.</p>
 
 <h2 id="epg">L'EPG, ce guide des programmes</h2>
 <p>L'EPG (<i>Electronic Program Guide</i>) est le fichier qui alimente la grille des programmes : ce qui passe
@@ -800,7 +804,7 @@ ARTICLES.append(dict(
     avant de s'engager sur une longue durée.</li>
 </ul>
 <p>Pour le reste — chaînes, replay, appareils compatibles, prix — le
-  <a href="blog-abonnement-iptv-france.html">guide de l'abonnement IPTV en France</a> fait le tour de la
+  <a href="/blog-abonnement-iptv-france">guide de l'abonnement IPTV en France</a> fait le tour de la
   question.</p>
 """))
 
@@ -894,15 +898,15 @@ ARTICLES.append(dict(
     d'autre.</li>
 </ul>
 <p>Une fois le matériel choisi, la mise en place prend quelques minutes :
-  <a href="blog-installer-playlist-m3u.html">notre guide d'installation</a> détaille la procédure appareil par
-  appareil, et le <a href="blog-abonnement-iptv-france.html">guide de l'abonnement IPTV en France</a> couvre les
+  <a href="/blog-installer-playlist-m3u">notre guide d'installation</a> détaille la procédure appareil par
+  appareil, et le <a href="/blog-abonnement-iptv-france">guide de l'abonnement IPTV en France</a> couvre les
   chaînes, le replay et les prix.</p>
 """))
 
 BREADCRUMB = """<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
 {"@type":"ListItem","position":1,"name":"Accueil","item":"%s/"},
-{"@type":"ListItem","position":2,"name":"Blog","item":"%s/blog.html"},
+{"@type":"ListItem","position":2,"name":"Blog","item":"%s/blog"},
 {"@type":"ListItem","position":3,"name":"%%s"}]}
 </script>""" % (DOMAIN, DOMAIN)
 
@@ -910,10 +914,10 @@ for a in ARTICLES:
     toc_html = '\n'.join('    <li><a href="%s">%s</a></li>' % (h, t) for t, h in a['toc'])
     art_ld = """<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"%s","description":"%s",
-"inLanguage":"fr-FR","mainEntityOfPage":"%s/%s",
+"inLanguage":"fr-FR","mainEntityOfPage":"%s%s",
 "image":"%s/assets/og-image.webp",
 "publisher":{"@type":"Organization","name":"France IPTV","url":"%s/"}}
-</script>""" % (a['title'].replace('"', '\\"'), a['desc'].replace('"', '\\"'), DOMAIN, a['slug'], DOMAIN, DOMAIN)
+</script>""" % (a['title'].replace('"', '\\"'), a['desc'].replace('"', '\\"'), DOMAIN, slug_url(a['slug']), DOMAIN, DOMAIN)
 
     inner = """
 <section class="bhero">
@@ -925,7 +929,7 @@ for a in ARTICLES:
     <div class="bmeta">
       <span><svg><use href="#i-clock"></use></svg> %(read)s</span>
       <span><svg><use href="#i-globe"></use></svg> Guide en français</span>
-      <span><a href="blog.html" style="color:var(--gold);font-weight:700">&larr; Tous les articles</a></span>
+      <span><a href="/blog" style="color:var(--gold);font-weight:700">&larr; Tous les articles</a></span>
     </div>
   </div>
 </section>
@@ -966,7 +970,7 @@ cards = '\n'.join("""      <a class="bcard" href="%s">
         <h2>%s</h2>
         <p>%s</p>
         <em>Lire l'article &rarr;</em>
-      </a>""" % (a['slug'], a['eyebrow'], a['title'], a['desc']) for a in ARTICLES)
+      </a>""" % (slug_url(a['slug']), a['eyebrow'], a['title'], a['desc']) for a in ARTICLES)
 
 blog_inner = """
 <section class="bhero">
@@ -1003,8 +1007,8 @@ print('wrote blog.html')
 pages = ['', 'blog.html'] + [a['slug'] for a in ARTICLES]
 prio  = {'': '1.0', 'blog.html': '0.8'}
 urls = '\n'.join(
-    '  <url>\n    <loc>%s/%s</loc>\n    <changefreq>%s</changefreq>\n    <priority>%s</priority>\n  </url>'
-    % (DOMAIN, p, 'weekly' if p in prio else 'monthly', prio.get(p, '0.7')) for p in pages)
+    '  <url>\n    <loc>%s%s</loc>\n    <changefreq>%s</changefreq>\n    <priority>%s</priority>\n  </url>'
+    % (DOMAIN, slug_url(p), 'weekly' if p in prio else 'monthly', prio.get(p, '0.7')) for p in pages)
 (D / 'sitemap.xml').write_text(
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n' % urls,
     encoding='utf-8')
