@@ -7,6 +7,13 @@ PHONE = '16728962871'
 PHONE_V = '+1 672 896 2871'
 DOMAIN = 'https://france-iptv.website'
 
+def slug_url(slug):
+    return '/' if slug in ('', 'index.html') else '/' + slug[:-5]
+
+def out_path(slug):
+    """blog.html -> blog/index.html : URL propre sans aucune redirection."""
+    return 'index.html' if slug == 'index.html' else slug[:-5] + '/index.html'
+
 def wa(msg):
     return 'https://wa.me/%s?text=%s' % (PHONE, urllib.parse.quote(msg, safe=''))
 
@@ -90,14 +97,14 @@ def shell(title, desc, slug, inner, extra_head=''):
 <meta name="theme-color" content="#0A0A0C">
 <title>%(title)s | France IPTV</title>
 <meta name="description" content="%(desc)s">
-<link rel="canonical" href="%(domain)s/%(slug)s">
+<link rel="canonical" href="%(domain)s%(url)s">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="format-detection" content="telephone=no">
-<link rel="alternate" hreflang="fr" href="%(domain)s/%(slug)s">
+<link rel="alternate" hreflang="fr" href="%(domain)s%(url)s">
 <meta property="og:type" content="article">
 <meta property="og:locale" content="fr_FR">
 <meta property="og:site_name" content="France IPTV">
-<meta property="og:url" content="%(domain)s/%(slug)s">
+<meta property="og:url" content="%(domain)s%(url)s">
 <meta property="og:title" content="%(title)s">
 <meta property="og:description" content="%(desc)s">
 <meta property="og:image" content="%(domain)s/assets/og-image.webp">
@@ -146,35 +153,35 @@ def shell(title, desc, slug, inner, extra_head=''):
 %(icons)s
 <header class="hdr is-stuck" id="hdr">
   <div class="wrap hdr__in">
-    <a href="index.html" class="logo" aria-label="France IPTV, accueil">
+    <a href="/" class="logo" aria-label="France IPTV, accueil">
       <span class="logo__mark" aria-hidden="true"><svg><use href="#i-logomark"></use></svg></span>
       <span><b>FRANCE</b> <i>IPTV</i></span>
     </a>
     <nav class="nav" aria-label="Navigation principale">
-      <a href="index.html">Accueil</a>
-      <a href="index.html#abonnement">Abonnement</a>
-      <a href="index.html#appareils">Appareils</a>
-      <a href="index.html#tarifs">Tarifs</a>
-      <a href="index.html#faq">FAQ</a>
-      <a href="blog.html" class="is-active">Blog</a>
-      <a href="index.html#contact">Contact</a>
+      <a href="/">Accueil</a>
+      <a href="/#abonnement">Abonnement</a>
+      <a href="/#appareils">Appareils</a>
+      <a href="/#tarifs">Tarifs</a>
+      <a href="/#faq">FAQ</a>
+      <a href="/blog" class="is-active">Blog</a>
+      <a href="/#contact">Contact</a>
     </nav>
     <div class="hdr__right">
       <a class="hdr__wa" href="{{WA_GENERIC}}" target="_blank" rel="noopener" aria-label="Nous écrire sur WhatsApp">
         <svg><use href="#i-wa"></use></svg><span>WhatsApp &bull; +1 672 896 2871</span></a>
-      <a class="btn btn-gold" href="index.html#tarifs">Commencer</a>
+      <a class="btn btn-gold" href="/#tarifs">Commencer</a>
       <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav"><span></span></button>
     </div>
   </div>
 </header>
 <div class="mnav" id="mnav">
-  <a class="mnav__l" href="index.html">Accueil</a>
-  <a class="mnav__l" href="index.html#abonnement">Abonnement IPTV</a>
-  <a class="mnav__l" href="index.html#appareils">Appareils compatibles</a>
-  <a class="mnav__l" href="index.html#tarifs">Tarifs</a>
-  <a class="mnav__l" href="index.html#faq">FAQ</a>
-  <a class="mnav__l" href="blog.html">Blog</a>
-  <a class="mnav__l" href="index.html#contact">Contact</a>
+  <a class="mnav__l" href="/">Accueil</a>
+  <a class="mnav__l" href="/#abonnement">Abonnement IPTV</a>
+  <a class="mnav__l" href="/#appareils">Appareils compatibles</a>
+  <a class="mnav__l" href="/#tarifs">Tarifs</a>
+  <a class="mnav__l" href="/#faq">FAQ</a>
+  <a class="mnav__l" href="/blog">Blog</a>
+  <a class="mnav__l" href="/#contact">Contact</a>
   <a class="btn btn-wa btn-block btn-lg" href="{{WA_GENERIC}}" target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg> Nous écrire sur WhatsApp</a>
 </div>
 <main>
@@ -184,7 +191,7 @@ def shell(title, desc, slug, inner, extra_head=''):
   <div class="wrap">
     <div class="ftr__grid">
       <div class="ftr__about">
-        <a href="index.html" class="logo">
+        <a href="/" class="logo">
           <span class="logo__mark" aria-hidden="true"><svg><use href="#i-logomark"></use></svg></span>
           <span><b>FRANCE</b> <i>IPTV</i></span>
         </a>
@@ -193,22 +200,22 @@ def shell(title, desc, slug, inner, extra_head=''):
         <a class="ftr__wa" href="{{WA_GENERIC}}" target="_blank" rel="noopener"><svg><use href="#i-wa"></use></svg> +1 672 896 2871</a>
       </div>
       <div><h4>Navigation</h4><ul>
-        <li><a href="index.html">Accueil</a></li>
-        <li><a href="index.html#abonnement">Abonnement IPTV</a></li>
-        <li><a href="index.html#appareils">Appareils</a></li>
-        <li><a href="index.html#tarifs">Tarifs</a></li>
+        <li><a href="/">Accueil</a></li>
+        <li><a href="/#abonnement">Abonnement IPTV</a></li>
+        <li><a href="/#appareils">Appareils</a></li>
+        <li><a href="/#tarifs">Tarifs</a></li>
       </ul></div>
       <div><h4>En savoir plus</h4><ul>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="index.html#guide">Guide IPTV</a></li>
-        <li><a href="index.html#faq">FAQ</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/#guide">Guide IPTV</a></li>
+        <li><a href="/#faq">FAQ</a></li>
+        <li><a href="/#contact">Contact</a></li>
       </ul></div>
       <div><h4>Assistance</h4><ul>
         <li><a href="{{WA_GENERIC}}" target="_blank" rel="noopener">Assistance WhatsApp</a></li>
-        <li><a href="blog-installer-playlist-m3u.html">Installer une playlist M3U</a></li>
-        <li><a href="blog-meilleur-iptv-france.html">Quel IPTV choisir</a></li>
-        <li><a href="blog-iptv-legal-france.html">IPTV et légalité</a></li>
+        <li><a href="/blog-installer-playlist-m3u">Installer une playlist M3U</a></li>
+        <li><a href="/blog-meilleur-iptv-france">Quel IPTV choisir</a></li>
+        <li><a href="/blog-iptv-legal-france">IPTV et légalité</a></li>
       </ul></div>
     </div>
     <p class="disclaimer">France IPTV fournit une prestation technique et une configuration de playlist ; le service
@@ -246,7 +253,7 @@ def shell(title, desc, slug, inner, extra_head=''):
 </script>
 </body>
 </html>
-""" % dict(title=title, desc=desc, slug=slug, inner=inner, css=css, js=js,
+""" % dict(title=title, desc=desc, slug=slug, url=slug_url(slug), inner=inner, css=css, js=js,
            icons=ICONS, domain=DOMAIN, extra_head=extra_head))
 
 # ---------------------------------------------------------------- articles
@@ -476,7 +483,7 @@ ARTICLES.append(dict(
 BREADCRUMB = """<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[
 {"@type":"ListItem","position":1,"name":"Accueil","item":"%s/"},
-{"@type":"ListItem","position":2,"name":"Blog","item":"%s/blog.html"},
+{"@type":"ListItem","position":2,"name":"Blog","item":"%s/blog"},
 {"@type":"ListItem","position":3,"name":"%%s"}]}
 </script>""" % (DOMAIN, DOMAIN)
 
@@ -484,10 +491,10 @@ for a in ARTICLES:
     toc_html = '\n'.join('    <li><a href="%s">%s</a></li>' % (h, t) for t, h in a['toc'])
     art_ld = """<script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Article","headline":"%s","description":"%s",
-"inLanguage":"fr-FR","mainEntityOfPage":"%s/%s",
+"inLanguage":"fr-FR","mainEntityOfPage":"%s%s",
 "image":"%s/assets/og-image.webp",
 "publisher":{"@type":"Organization","name":"France IPTV","url":"%s/"}}
-</script>""" % (a['title'].replace('"', '\\"'), a['desc'].replace('"', '\\"'), DOMAIN, a['slug'], DOMAIN, DOMAIN)
+</script>""" % (a['title'].replace('"', '\\"'), a['desc'].replace('"', '\\"'), DOMAIN, slug_url(a['slug']), DOMAIN, DOMAIN)
 
     inner = """
 <section class="bhero">
@@ -499,7 +506,7 @@ for a in ARTICLES:
     <div class="bmeta">
       <span><svg><use href="#i-clock"></use></svg> %(read)s</span>
       <span><svg><use href="#i-globe"></use></svg> Guide en français</span>
-      <span><a href="blog.html" style="color:var(--gold);font-weight:700">&larr; Tous les articles</a></span>
+      <span><a href="/blog" style="color:var(--gold);font-weight:700">&larr; Tous les articles</a></span>
     </div>
   </div>
 </section>
@@ -531,7 +538,8 @@ for a in ARTICLES:
 
     html = shell(a['title'], a['desc'], a['slug'], inner,
                  extra_head=art_ld + '\n' + (BREADCRUMB % a['title']))
-    (D / a['slug']).write_text(html, encoding='utf-8')
+    dest = D / out_path(a['slug']); dest.parent.mkdir(parents=True, exist_ok=True)
+    dest.write_text(html, encoding='utf-8')
     print('wrote', a['slug'])
 
 # ---------------------------------------------------------------- blog index
@@ -540,7 +548,7 @@ cards = '\n'.join("""      <a class="bcard" href="%s">
         <h2>%s</h2>
         <p>%s</p>
         <em>Lire l'article &rarr;</em>
-      </a>""" % (a['slug'], a['eyebrow'], a['title'], a['desc']) for a in ARTICLES)
+      </a>""" % (slug_url(a['slug']), a['eyebrow'], a['title'], a['desc']) for a in ARTICLES)
 
 blog_inner = """
 <section class="bhero">
@@ -564,7 +572,8 @@ blog_inner = """
 </section>
 """ % cards
 
-(D / 'blog.html').write_text(
+(D / 'blog').mkdir(exist_ok=True)
+(D / 'blog' / 'index.html').write_text(
     shell("Blog — guides IPTV en français",
           "Guides et explications sur l'IPTV en France : choisir un abonnement, installer une playlist M3U, comprendre le cadre légal.",
           'blog.html', blog_inner), encoding='utf-8')
@@ -577,8 +586,8 @@ print('wrote blog.html')
 pages = ['', 'blog.html'] + [a['slug'] for a in ARTICLES]
 prio  = {'': '1.0', 'blog.html': '0.8'}
 urls = '\n'.join(
-    '  <url>\n    <loc>%s/%s</loc>\n    <changefreq>%s</changefreq>\n    <priority>%s</priority>\n  </url>'
-    % (DOMAIN, p, 'weekly' if p in prio else 'monthly', prio.get(p, '0.7')) for p in pages)
+    '  <url>\n    <loc>%s%s</loc>\n    <changefreq>%s</changefreq>\n    <priority>%s</priority>\n  </url>'
+    % (DOMAIN, slug_url(p), 'weekly' if p in prio else 'monthly', prio.get(p, '0.7')) for p in pages)
 (D / 'sitemap.xml').write_text(
     '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n%s\n</urlset>\n' % urls,
     encoding='utf-8')
