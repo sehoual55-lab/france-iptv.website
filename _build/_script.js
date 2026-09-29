@@ -128,7 +128,7 @@
      FENÊTRE DE COMMANDE (checkout)
      Aucun numéro de carte n'est demandé ni traité sur ce site :
      le formulaire ne recueille que le nom, l'e-mail, le téléphone
-     et le mode de paiement souhaité (carte bancaire ou PayPal).
+     et le mode de paiement souhaité (carte bancaire).
 
      ENREGISTREMENT DES COMMANDES
      Chaque commande est ajoutée à votre Google Sheet et vous est
